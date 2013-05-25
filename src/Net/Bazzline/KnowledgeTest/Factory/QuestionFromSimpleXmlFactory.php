@@ -9,7 +9,7 @@ use Net\Bazzline\KnowledgeTest\TestCase\Question;
 use SimpleXMLElement;
 
 /**
- * Class QuestionFromPhpArrayFactory
+ * Class QuestionFromSimpleXmlFactory
  *
  * @package Net\Bazzline\KnowledgeTest\Factory
  * @author stev leibelt <artodeto@arcor.de>
