@@ -3,15 +3,15 @@
  * @author stev leibelt <artodeto@arcor.de>
  * @since 2013-05-25
  */
-namespace Net\Bazzline\KnowledgeTest\TestCase;
+namespace Net\Bazzline\KnowledgeTest\Factory;
 
 use InvalidArgumentException;
 
 /**
- * Class TestCaseInvalidArgumentException
+ * Class FactoryInvalidArgumentException
  *
  * @package Net\Bazzline\TestCase
  * @author stev leibelt <artodeto@arcor.de>
  * @since 2013-05-25
  */
-class TestCaseInvalidArgumentException extends InvalidArgumentException {}
+class FactoryInvalidArgumentException extends InvalidArgumentException {}

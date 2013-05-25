@@ -18,6 +18,7 @@ interface FactoryInterface
      * @param mixed $source - the source
      *
      * @return mixed
+     * @throws FactoryInvalidArgumentException
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-05-26
      */
