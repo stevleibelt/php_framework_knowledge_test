@@ -31,4 +31,37 @@ interface QuestionInterface
      * @since 2013-05-25
      */
     public function getProblemDefinition();
+
+    /**
+     * Method to check if a hind is available
+     *
+     * @return boolean
+     * @author stev leibelt <artodeto@arcor.de>
+     * @since 2013-05-26
+     */
+    public function isHintAvailable();
+
+    /**
+     * Sets the hint to find the right answer.
+     *
+     * @param string $hint - the hint
+     *
+     * @return QuestionInterface
+     * @throws \InvalidArgumentException
+     * @author stev leibelt <artodeto@arcor.de>
+     * @since 2013-05-26
+     */
+    public function setHint($hint);
+
+    /**
+     * Sets the question
+     *
+     * @param string $problemDefinition - the question
+     *
+     * @return QuestionInterface
+     * @throws \InvalidArgumentException
+     * @author stev leibelt <artodeto@arcor.de>
+     * @since 2013-05-26
+     */
+    public function setProblemDefinition($problemDefinition);
 }
