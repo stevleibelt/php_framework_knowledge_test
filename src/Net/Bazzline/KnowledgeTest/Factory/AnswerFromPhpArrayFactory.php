@@ -68,13 +68,14 @@ class AnswerFromPhpArrayFactory implements FactoryInterface
             );
         }
 
-        if (!class_exists('Net\\Bazzline\\KnowledgeTest\\TestCase\\' . $source['type'])) {
+        $answerClass = $source['type'];
+        if (!class_exists('Net\\Bazzline\\KnowledgeTest\\TestCase\\' . $answerClass)) {
             throw new FactoryInvalidArgumentException(
                 'Not supported type found in source array'
             );
         }
 
-        $answer = new $source['type']();
+        $answer = new $answerClass();
         foreach ($source['opportunities'] as $opportunity) {
             $answer->addOpportunity($opportunity);
         }
