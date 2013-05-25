@@ -9,18 +9,18 @@ use Net\Bazzline\KnowledgeTest\TestCase\Question;
 use SimpleXMLElement;
 
 /**
- * Class QuestionFromSimpleXmlFactory
+ * Class QuestionFromXmlFactory
  *
  * @package Net\Bazzline\KnowledgeTest\Factory
  * @author stev leibelt <artodeto@arcor.de>
  * @since 2013-05-26
  */
-class QuestionFromSimpleXmlFactory implements FactoryInterface
+class QuestionFromXmlFactory implements FactoryInterface
 {
     /**
      * Creates object
      *
-     * @param mixed $source - the source
+     * @param string $source - the source
      *  example:
      *      <problemDefinition>
      *          This is an example problem
@@ -29,20 +29,16 @@ class QuestionFromSimpleXmlFactory implements FactoryInterface
      *          This is an example hint and a hint is optional
      *      </hint>
      *
-     * @return object
+     * @return \Net\Bazzline\KnowledgeTest\TestCase\Question
      * @throws FactoryInvalidArgumentException
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-05-26
      */
     public function fromSource($source)
     {
-        if (!$source instanceof SimpleXMLElement) {
-            throw new FactoryInvalidArgumentException(
-                'Source has to be from type \SimpleXMLElement'
-            );
-        }
+        $simpleXml = new SimpleXMLElement($source);
 
-        if (!isset($source->problemDefinition)) {
+        if (!isset($simpleXml->problemDefinition)) {
             throw new FactoryInvalidArgumentException(
                 'No problemDefinition found in source \SimpleXMLElement'
             );
@@ -50,9 +46,9 @@ class QuestionFromSimpleXmlFactory implements FactoryInterface
 
         $question = new Question();
 
-        $question->setProblemDefinition($source->problemDefinition);
-        if (isset($source->hint)) {
-            $question->setHint($source->hint);
+        $question->setProblemDefinition($simpleXml->problemDefinition);
+        if (isset($simpleXml->hint)) {
+            $question->setHint($simpleXml->hint);
         }
 
         return $question;
