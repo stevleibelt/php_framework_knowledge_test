@@ -20,12 +20,13 @@ class QuestionFromPhpArrayFactory implements FactoryInterface
      * Creates object
      *
      * @param mixed $source - the source
-     *  example: array(
-     *              'problemDefinition' => 'This is an example problem',
-     *              'hint' => 'This is an example hint and a hint is optional'
-     *          )
+     *  example:
+     *      array(
+     *          'problemDefinition' => 'This is an example problem',
+     *          'hint' => 'This is an example hint and a hint is optional'
+     *      )
      *
-     * @return object
+     * @return \Net\Bazzline\KnowledgeTest\TestCase\Question
      * @throws FactoryInvalidArgumentException
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-05-26

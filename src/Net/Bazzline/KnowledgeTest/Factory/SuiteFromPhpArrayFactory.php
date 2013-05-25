@@ -20,15 +20,16 @@ class SuiteFromPhpArrayFactory implements FactoryInterface
      * Creates object
      *
      * @param mixed $source - the source
-     *  example: array(
-     *      'name' => 'Example suite',
-     *      'description' => 'Example description',
-     *      'language' => 'de',
-     *      'pathToTestCases' => array(
-     *          'relative path from suite to test case',
-     *          '[optional] relative path from suite to test case'
+     *  example:
+     *      array(
+     *          'name' => 'Example suite',
+     *          'description' => 'Example description',
+     *          'language' => 'de',
+     *          'pathToTestCases' => array(
+     *              'relative path from suite to test case',
+     *              '[optional] relative path from suite to test case'
+     *          )
      *      )
-     * )
      *
      * @return \Net\Bazzline\KnowledgeTest\TestCase\Suite
      * @throws FactoryInvalidArgumentException
