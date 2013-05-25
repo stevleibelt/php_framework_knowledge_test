@@ -3,7 +3,7 @@
  * @author stev leibelt <artodeto@arcor.de>
  * @since 2013-05-25
  */
-namespace Net\Bazzline\TestCase\Answer;
+namespace Net\Bazzline\TestCase;
 
 /**
  * Class QuestionInterface
