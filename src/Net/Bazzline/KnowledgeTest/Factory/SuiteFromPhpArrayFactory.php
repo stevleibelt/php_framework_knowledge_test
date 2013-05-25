@@ -30,7 +30,7 @@ class SuiteFromPhpArrayFactory implements FactoryInterface
      *      )
      * )
      *
-     * @return object
+     * @return \Net\Bazzline\KnowledgeTest\TestCase\Suite
      * @throws FactoryInvalidArgumentException
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-05-26

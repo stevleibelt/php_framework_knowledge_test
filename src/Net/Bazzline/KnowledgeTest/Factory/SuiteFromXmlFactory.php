@@ -9,52 +9,46 @@ use Net\Bazzline\KnowledgeTest\TestCase\Suite;
 use \SimpleXMLElement;
 
 /**
- * Class SuiteFromSimpleXmlFactory
+ * Class SuiteFromXmlFactory
  *
  * @package Net\Bazzline\KnowledgeTest\Factory
  * @author stev leibelt <artodeto@arcor.de>
  * @since 2013-05-26
  */
-class SuiteFromSimpleXmlFactory implements FactoryInterface
+class SuiteFromXmlFactory implements FactoryInterface
 {
     /**
      * Creates object
      *
      * @param mixed $source - the source
      *  example:
-     *      <suite>
-     *          <?xml version="1.0" encoding="utf-8" ?>
-     *          <name>
-     *              Example suite
-     *          </name>
-     *          <description>
-     *              Example description
-     *          </description>
-     *          <language>
-     *              de
-     *          </language>
-     *          <pathToTestCase>
-     *              relative path from suite to test case
-     *          </pathToTestCase>
-     *          <pathToTestCase>
-     *              [optional] relative path from suite to test case
-     *          </pathToTestCase>
-     *      </suite>
+     *      <?xml version="1.0" encoding="utf-8" ?>
+     *      <name>
+     *          Example suite
+     *      </name>
+     *      <description>
+     *          Example description
+     *      </description>
+     *      <language>
+     *          de
+     *      </language>
+     *      <pathToTestCase>
+     *          relative path from suite to test case
+     *      </pathToTestCase>
+     *      <pathToTestCase>
+     *          [optional] relative path from suite to test case
+     *      </pathToTestCase>
      *
-     * @return object
+     * @return \Net\Bazzline\KnowledgeTest\TestCase\Suite
      * @throws FactoryInvalidArgumentException
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-05-26
      */
     public function fromSource($source)
     {
-        if (!$source instanceof SimpleXMLElement) {
-            throw new FactoryInvalidArgumentException(
-                'Source has to be from type \SimpleXMLElement'
-            );
-        }
+        $simpleXml = new SimpleXMLElement($source);
 
-        $pathsToTestCase = (array) $source->pathToTextCase;
+        $pathsToTestCase = (array) $simpleXml->pathToTextCase;
         if (empty($pathsToTestCase)) {
             throw new FactoryInvalidArgumentException(
                 'No test cases found in suite'
@@ -63,9 +57,9 @@ class SuiteFromSimpleXmlFactory implements FactoryInterface
 
         $suite = new Suite();
 
-        $suite->setName($source->name);
-        $suite->setLanguage($source->language);
-        $suite->setDescription($source->description);
+        $suite->setName($simpleXml->name);
+        $suite->setLanguage($simpleXml->language);
+        $suite->setDescription($simpleXml->description);
         foreach ($pathsToTestCase as $pathToTestCase) {
             if (file_exists($pathToTestCase)
                 && is_readable($pathToTestCase)) {
