@@ -10,7 +10,7 @@ use InvalidArgumentException;
 /**
  * Class FactoryInvalidArgumentException
  *
- * @package Net\Bazzline\TestCase
+ * @package Net\Bazzline\KnowledgeTest\Factory
  * @author stev leibelt <artodeto@arcor.de>
  * @since 2013-05-25
  */

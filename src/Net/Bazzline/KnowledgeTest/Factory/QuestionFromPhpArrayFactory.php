@@ -8,35 +8,42 @@ namespace Net\Bazzline\KnowledgeTest\Factory;
 use Net\Bazzline\KnowledgeTest\TestCase\Question;
 
 /**
- * Class QuestionFromPhp
+ * Class QuestionFromPhpArrayFactory
  *
- * @package Net\Bazzline\TestCase
+ * @package Net\Bazzline\KnowledgeTest\Factory
  * @author stev leibelt <artodeto@arcor.de>
  * @since 2013-05-26
  */
 class QuestionFromPhpArrayFactory implements FactoryInterface
 {
     /**
-     * Creates question from php array
+     * Creates object
      *
-     * @param array $source
+     * @param mixed $source - the source
      *  example: array(
      *              'problemDefinition' => 'This is an example problem',
      *              'hint' => 'This is an example hint and a hint is optional'
      *          )
      *
-     * @return Question
+     * @return object
      * @throws FactoryInvalidArgumentException
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-05-26
      */
-    public function fromSource(array $source)
+    public function fromSource($source)
     {
+        if (!is_array($source)) {
+            throw new FactoryInvalidArgumentException(
+                'Source has to be from type array'
+            );
+        }
+
         if (!isset($source['problemDefinition'])) {
             throw new FactoryInvalidArgumentException(
                 'No problemDefinition found in source array'
             );
         }
+
         $question = new Question();
 
         $question->setProblemDefinition($source['problemDefinition']);
