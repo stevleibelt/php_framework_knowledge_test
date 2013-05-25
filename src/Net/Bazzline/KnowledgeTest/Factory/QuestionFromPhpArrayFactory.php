@@ -26,13 +26,23 @@ class QuestionFromPhpArrayFactory implements FactoryInterface
      *          )
      *
      * @return Question
+     * @throws FactoryInvalidArgumentException
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-05-26
      */
     public function fromSource(array $source)
     {
-        //@TODO - add validation (to abstract class?)
+        if (!isset($source['problemDefinition'])) {
+            throw new FactoryInvalidArgumentException(
+                'No problemDefinition found in source array'
+            );
+        }
         $question = new Question();
+
+        $question->setProblemDefinition($source['problemDefinition']);
+        if (isset($source['hint'])) {
+            $question->setHint($source['hint']);
+        }
 
         return $question;
     }
