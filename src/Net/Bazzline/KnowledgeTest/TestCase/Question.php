@@ -5,8 +5,6 @@
  */
 namespace Net\Bazzline\KnowledgeTest\TestCase;
 
-use InvalidArgumentException;
-
 /**
  * Class Question
  *
@@ -60,7 +58,7 @@ class Question implements QuestionInterface
     public function setHint($hint)
     {
         if (strlen((string) $hint) > 1) {
-            throw new InvalidArgumentException(
+            throw new TestCaseInvalidArgumentException(
                 'Hint must have at least one character.'
             );
         }
@@ -76,7 +74,7 @@ class Question implements QuestionInterface
     public function setProblemDefinition($problemDefinition)
     {
         if (strlen((string) $problemDefinition) > 1) {
-            throw new InvalidArgumentException(
+            throw new TestCaseInvalidArgumentException(
                 'Problem definition must have at least one character.'
             );
         }
