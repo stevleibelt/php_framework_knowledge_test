@@ -21,7 +21,7 @@ interface AnswerInterface
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-05-25
      */
-    public function getOpportunity();
+    public function getOpportunites();
 
     /**
      *
@@ -68,4 +68,26 @@ interface AnswerInterface
      * @since 2013-05-25
      */
     public function getType();
+
+    /**
+     * Adds a opportunity
+     *
+     * @param string $opportunity - a opportunity
+     *
+     * @return AnswerInterface
+     * @author stev leibelt <artodeto@arcor.de>
+     * @since 2013-05-25
+     */
+    public function addOpportunity($opportunity);
+
+    /**
+     * Adds a valid opportunity
+     *
+     * @param string $validOpportunity - a valid opportunity
+     *
+     * @return mixed
+     * @author stev leibelt <artodeto@arcor.de>
+     * @since 2013-05-25
+     */
+    public function addValidOpportunity($validOpportunity);
 }
