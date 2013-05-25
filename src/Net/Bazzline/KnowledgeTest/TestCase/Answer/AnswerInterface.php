@@ -25,23 +25,22 @@ interface AnswerInterface
 
     /**
      *
-     * @param integer $id - the id of the selected opportunity indicated as
-     *  true
+     * @param string $opportunity - s
      *
      * @return AnswerInterface
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-05-25
      */
-    public function addGivenValidOpportunityId($id);
+    public function addSelectedOpportunity($opportunity);
 
     /**
-     * Validates given opportunity ids.
+     * Validates given opportunity.
      *
      * @return boolean
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-05-25
      */
-    public function validateGivenOpportunityIds();
+    public function validateSelectedOpportunities();
 
     /**
      * Returns the percentage (0 up to 100) of accuracy.
