@@ -4,7 +4,7 @@
  * @since 2013-05-25 
  */
 
-namespace Net\Bazzline\TestCase;
+namespace Net\Bazzline\KnowledgeTest\TestCase;
 
 /**
  * Class TestCaseGerman

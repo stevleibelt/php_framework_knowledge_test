@@ -3,7 +3,7 @@
  * Defines the interface for each test case.
  * A test case contains one question class and one answer class. Both are injected into the test case.
  */
-namespace Net\Bazzline\TestCase;
+namespace Net\Bazzline\KnowledgeTest\TestCase;
 
 use Net\Bazzline\TestCase\Answer;
 use Net\Bazzline\TestCase\Question;

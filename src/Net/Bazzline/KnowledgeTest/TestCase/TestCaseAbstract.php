@@ -1,6 +1,6 @@
 <?php
 
-namespace Net\Bazzline\TestCase;
+namespace Net\Bazzline\KnowledgeTest\TestCase;
 
 use Net\Bazzline\TestCase\Answer;
 use Net\Bazzline\TestCase\Question;

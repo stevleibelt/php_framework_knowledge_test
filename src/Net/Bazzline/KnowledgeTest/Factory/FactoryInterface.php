@@ -3,7 +3,7 @@
  * @author stev leibelt <artodeto@arcor.de>
  * @since 2013-05-26
  */
-namespace Net\Bazzline\TestCase;
+namespace Net\Bazzline\KnowledgeTest\Factory;
 
 /**
  * Class FactoryInterface
