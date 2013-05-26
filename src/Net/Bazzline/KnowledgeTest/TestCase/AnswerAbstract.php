@@ -6,13 +6,13 @@
 namespace Net\Bazzline\KnowledgeTest\TestCase;
 
 /**
- * Class AnswerInterface
+ * Class AnswerAbstract
  *
  * @package Net\Bazzline\TestCase\Answer
  * @author stev leibelt <artodeto@arcor.de>
  * @since 2013-05-26
  */
-abstract class AnswerAbstract
+abstract class AnswerAbstract implements AnswerInterface
 {
     /**
      * @var array

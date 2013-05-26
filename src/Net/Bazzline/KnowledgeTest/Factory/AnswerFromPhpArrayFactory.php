@@ -5,8 +5,8 @@
  */
 namespace Net\Bazzline\KnowledgeTest\Factory;
 
-use Net\Bazzline\KnowledgeTest\TestCase\SelectMultipleAnswer;
-use Net\Bazzline\KnowledgeTest\TestCase\SelectSingleAnswer;
+use Net\Bazzline\KnowledgeTest\TestCase\MultipleAnswer;
+use Net\Bazzline\KnowledgeTest\TestCase\SingleAnswer;
 use Net\Bazzline\KnowledgeTest\TestCase\FreeTextAnswer;
 
 /**
