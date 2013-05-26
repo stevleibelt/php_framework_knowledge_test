@@ -14,7 +14,7 @@ namespace Net\Bazzline\KnowledgeTest\Factory;
  * @author stev leibelt <artodeto@arcor.de>
  * @since 2013-05-26
  */
-class TestCaseFactory
+class TestCaseFactory extends FactoryAbstract
 {
     /**
      * @var array
@@ -51,7 +51,10 @@ class TestCaseFactory
 
         if (strripos('php', $filename. -3) !== false) {
             if (!isset($this->instancePool['php'])) {
-                $this->instancePool['php'] = new TestCaseFromPhpArrayFactory();
+                $factory = new TestCaseFromPhpArrayFactory();
+                $factory->setServiceLocator($this->getServiceLocator());
+
+                $this->instancePool['php'] = $factory;
             }
 
             return $this->instancePool['php'];
@@ -59,7 +62,10 @@ class TestCaseFactory
 
         if (strripos('xml', $filename. -3) !== false) {
             if (!isset($this->instancePool['xml'])) {
-                $this->instancePool['xml'] = new TestCaseFromXmlFactory();
+                $factory = new TestCaseFromXmlFactory();
+                $factory->setServiceLocator($this->getServiceLocator());
+
+                $this->instancePool['xml'] = $factory;
             }
 
             return $this->instancePool['xml'];

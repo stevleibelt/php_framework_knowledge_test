@@ -16,7 +16,7 @@ use Net\Bazzline\KnowledgeTest\ServiceLocator\ServiceLocatorAwareInterface;
  * @author stev leibelt <artodeto@arcor.de>
  * @since 2013-05-26
  */
-abstract class FactoryAbstract implements FactoryInterface, ServiceLocatorAwareInterface
+abstract class FactoryAbstract implements FactoryFromSourceInterface, ServiceLocatorAwareInterface
 {
     private $serviceLocator;
 

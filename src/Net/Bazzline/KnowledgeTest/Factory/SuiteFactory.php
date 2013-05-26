@@ -14,7 +14,7 @@ namespace Net\Bazzline\KnowledgeTest\Factory;
  * @author stev leibelt <artodeto@arcor.de>
  * @since 2013-05-26
  */
-class SuiteFactory
+class SuiteFactory extends FactoryAbstract
 {
     /**
      * @var array
@@ -51,7 +51,10 @@ class SuiteFactory
 
         if (strripos('php', $filename. -3) !== false) {
             if (!isset($this->instancePool['php'])) {
-                $this->instancePool['php'] = new SuiteFromPhpArrayFactory();
+                $factory = new SuiteFromPhpArrayFactory();
+                $factory->setServiceLocator($this->getServiceLocator());
+
+                $this->instancePool['php'] = $factory;
             }
 
             return $this->instancePool['php'];
@@ -59,7 +62,10 @@ class SuiteFactory
 
         if (strripos('xml', $filename. -3) !== false) {
             if (!isset($this->instancePool['xml'])) {
-                $this->instancePool['xml'] = new SuiteFromXmlFactory();
+                $factory = new SuiteFromXmlFactory();
+                $factory->setServiceLocator($this->getServiceLocator());
+
+                $this->instancePool['xml'] = $factory;
             }
 
             return $this->instancePool['xml'];
