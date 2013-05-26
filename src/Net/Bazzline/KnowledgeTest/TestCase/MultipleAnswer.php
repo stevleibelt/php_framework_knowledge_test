@@ -6,7 +6,7 @@
 namespace Net\Bazzline\KnowledgeTest\TestCase;
 
 /**
- * Class SingleAnswer
+ * Class MultipleAnswer
  *
  * @package Net\Bazzline\TestCase\Answer
  * @author stev leibelt <artodeto@arcor.de>
