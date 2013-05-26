@@ -19,7 +19,7 @@ class TestCaseFromPhpArrayFactory implements FactoryInterface
     /**
      * Creates object
      *
-     * @param mixed $source - the source
+     * @param mixed $array - the source
      *  example:
      *      array(
      *          'question' => array(
@@ -44,21 +44,30 @@ class TestCaseFromPhpArrayFactory implements FactoryInterface
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-05-26
      */
-    public function fromSourceFile($source)
+    public function fromSourceFile($filename)
     {
-        if (!is_array($source)) {
+        if ((!file_exists($filename))
+            || (!is_readable($filename))) {
+            throw new FactoryInvalidArgumentException(
+                'Source filename does not exists or is not readable'
+            );
+        }
+
+        $array = require_once $filename;
+
+        if (!is_array($array)) {
             throw new FactoryInvalidArgumentException(
                 'Source has to be from type array'
             );
         }
 
-        if (!isset($source['question'])) {
+        if (!isset($array['question'])) {
             throw new FactoryInvalidArgumentException(
                 'No question found in suite'
             );
         }
 
-        if (!isset($source['answer'])) {
+        if (!isset($array['answer'])) {
             throw new FactoryInvalidArgumentException(
                 'No answer found in suite'
             );
@@ -68,8 +77,8 @@ class TestCaseFromPhpArrayFactory implements FactoryInterface
         $questionFactory = new QuestionFromPhpArrayFactory();
         $answerFactory = new AnswerFromPhpArrayFactory();
 
-        $question = $questionFactory->fromSourceFile($source['question']);
-        $answer = $answerFactory->fromSourceFile($source['answer']);
+        $question = $questionFactory->fromSourceFile($array['question']);
+        $answer = $answerFactory->fromSourceFile($array['answer']);
 
         $testCase->setQuestion($question);
         $testCase->setAnswer($answer);

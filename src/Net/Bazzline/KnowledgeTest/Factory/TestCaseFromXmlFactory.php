@@ -20,7 +20,7 @@ class TestCaseFromXmlFactory implements FactoryInterface
     /**
      * Creates object
      *
-     * @param mixed $source - the source
+     * @param mixed $filename - the source
      *  example:
      *      <?xml version="1.0" encoding="utf-8" ?>
      *      <answer>
@@ -60,17 +60,26 @@ class TestCaseFromXmlFactory implements FactoryInterface
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-05-26
      */
-    public function fromSourceFile($source)
+    public function fromSourceFile($filename)
     {
-        $simpleXml = new SimpleXMLElement($source);
+        if ((!file_exists($filename))
+            || (!is_readable($filename))) {
+            throw new FactoryInvalidArgumentException(
+                'Source filename does not exists or is not readable'
+            );
+        }
 
-        if (!isset($source->question)) {
+        $simpleXml = new SimpleXMLElement(
+            file_get_contents($filename)
+        );
+
+        if (!isset($simpleXml->question)) {
             throw new FactoryInvalidArgumentException(
                 'No question found in suite'
             );
         }
 
-        if (!isset($source->answer)) {
+        if (!isset($simpleXml->answer)) {
             throw new FactoryInvalidArgumentException(
                 'No answer found in suite'
             );
@@ -80,8 +89,8 @@ class TestCaseFromXmlFactory implements FactoryInterface
         $questionFactory = new QuestionFromXmlFactory();
         $answerFactory = new AnswerFromXmlFactory();
 
-        $question = $questionFactory->fromSourceFile($source->question);
-        $answer = $answerFactory->fromSourceFile($source->answer);
+        $question = $questionFactory->fromSourceFile($simpleXml->question);
+        $answer = $answerFactory->fromSourceFile($simpleXml->answer);
 
         $testCase->setQuestion($question);
         $testCase->setAnswer($answer);
