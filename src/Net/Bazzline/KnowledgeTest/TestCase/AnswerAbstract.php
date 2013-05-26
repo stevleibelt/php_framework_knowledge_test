@@ -60,15 +60,15 @@ abstract class AnswerAbstract implements AnswerInterface
 
     /**
      *
-     * @param string $opportunity - s
+     * @param string $selectedOpportunity - user selected opportunity
      *
      * @return AnswerInterface
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-05-26
      */
-    public function addSelectedOpportunity($opportunity)
+    public function addSelectedOpportunity($selectedOpportunity)
     {
-        $this->selectedOpportunities[] = $opportunity;
+        $this->selectedOpportunities[md5($selectedOpportunity)] = $selectedOpportunity;
 
         return $this;
     }
@@ -111,7 +111,7 @@ abstract class AnswerAbstract implements AnswerInterface
      */
     public function addOpportunity($opportunity)
     {
-        $this->opportunities[] = $opportunity;
+        $this->opportunities[md5($opportunity)] = $opportunity;
 
         return $this;
     }
@@ -127,7 +127,7 @@ abstract class AnswerAbstract implements AnswerInterface
      */
     public function addValidOpportunity($validOpportunity)
     {
-        $this->validOpportunities[] = $validOpportunity;
+        $this->validOpportunities[md5($validOpportunity)] = $validOpportunity;
 
         return $this;
     }

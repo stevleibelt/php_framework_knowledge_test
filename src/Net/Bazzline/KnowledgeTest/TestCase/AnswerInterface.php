@@ -25,13 +25,13 @@ interface AnswerInterface
 
     /**
      *
-     * @param string $opportunity - s
+     * @param string $selectedOpportunity - user selected opportunity
      *
      * @return AnswerInterface
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-05-25
      */
-    public function addSelectedOpportunity($opportunity);
+    public function addSelectedOpportunity($selectedOpportunity);
 
     /**
      * Validates given opportunity.
