@@ -256,7 +256,7 @@ class ServiceLocator
         if (!isset($this->instancePool[$className])
             && (class_exists($className))) {
             $this->instancePool[$className] = new $className();
-            if (in_array('ServiceLocatorAwareInterface', class_implements($this->instancePool[$className]))) {
+            if (in_array('Net\Bazzline\\KnowledgeTest\\ServiceLocator\\ServiceLocatorAwareInterface', class_implements($this->instancePool[$className]))) {
                 $this->instancePool[$className]->setServiceLocator($this);
             }
         } else {

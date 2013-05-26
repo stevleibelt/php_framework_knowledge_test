@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<name>
+    Example suite
+</name>
+<description>
+    Example description
+</description>
+<language>
+    de
+</language>
+<pathToTestCase>
+    FooTestCase.php
+</pathToTestCase>

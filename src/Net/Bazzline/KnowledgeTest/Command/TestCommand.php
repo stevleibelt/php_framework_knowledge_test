@@ -96,7 +96,7 @@ class TestCommand extends CommandAbstract
                 ->getNewSuiteFilterDirectoryIterator($path);
 
             foreach ($suiteIterator as $suite) {
-                $suites[] = $suite;
+                $suites[] = (string) $suite;
 
                 $output = $this->addInfo($output, 'Found suite "' . $suite . '"');
             }
