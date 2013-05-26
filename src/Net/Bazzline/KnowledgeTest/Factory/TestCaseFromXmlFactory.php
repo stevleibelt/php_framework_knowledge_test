@@ -60,7 +60,7 @@ class TestCaseFromXmlFactory implements FactoryInterface
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-05-26
      */
-    public function fromSourceFile($filename)
+    public function fromSource($filename)
     {
         if ((!file_exists($filename))
             || (!is_readable($filename))) {
@@ -89,8 +89,8 @@ class TestCaseFromXmlFactory implements FactoryInterface
         $questionFactory = new QuestionFromXmlFactory();
         $answerFactory = new AnswerFromXmlFactory();
 
-        $question = $questionFactory->fromSourceFile($simpleXml->question);
-        $answer = $answerFactory->fromSourceFile($simpleXml->answer);
+        $question = $questionFactory->fromSource($simpleXml->question);
+        $answer = $answerFactory->fromSource($simpleXml->answer);
 
         $testCase->setQuestion($question);
         $testCase->setAnswer($answer);

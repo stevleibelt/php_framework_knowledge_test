@@ -19,9 +19,9 @@ class TestCaseFromPhpArrayFactory implements FactoryInterface
     /**
      * Creates object
      *
-     * @param mixed $array - the source
+     * @param mixed $filename - the source
      *  example:
-     *      array(
+     *      return array(
      *          'question' => array(
      *              'problemDefinition' => 'the problem definition',
      *              'hint' => 'This is an example hint and a hint is optional'
@@ -37,14 +37,14 @@ class TestCaseFromPhpArrayFactory implements FactoryInterface
      *                  'Second Answer'
      *              )
      *          )
-     *      )
+     *      );
      *
      * @return \Net\Bazzline\KnowledgeTest\TestCase\TestCase
      * @throws FactoryInvalidArgumentException
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-05-26
      */
-    public function fromSourceFile($filename)
+    public function fromSource($filename)
     {
         if ((!file_exists($filename))
             || (!is_readable($filename))) {
@@ -77,8 +77,8 @@ class TestCaseFromPhpArrayFactory implements FactoryInterface
         $questionFactory = new QuestionFromPhpArrayFactory();
         $answerFactory = new AnswerFromPhpArrayFactory();
 
-        $question = $questionFactory->fromSourceFile($array['question']);
-        $answer = $answerFactory->fromSourceFile($array['answer']);
+        $question = $questionFactory->fromSource($array['question']);
+        $answer = $answerFactory->fromSource($array['answer']);
 
         $testCase->setQuestion($question);
         $testCase->setAnswer($answer);

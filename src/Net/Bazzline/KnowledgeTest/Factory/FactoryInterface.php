@@ -24,5 +24,5 @@ interface FactoryInterface
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-05-26
      */
-    public function fromSourceFile($filename);
+    public function fromSource($filename);
 }

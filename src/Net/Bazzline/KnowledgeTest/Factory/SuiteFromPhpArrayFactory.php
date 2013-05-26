@@ -21,7 +21,7 @@ class SuiteFromPhpArrayFactory implements FactoryInterface
      *
      * @param mixed $filename - the source
      *  example:
-     *      array(
+     *      return array(
      *          'name' => 'Example suite',
      *          'description' => 'Example description',
      *          'language' => 'de',
@@ -29,14 +29,14 @@ class SuiteFromPhpArrayFactory implements FactoryInterface
      *              'relative path from suite to test case',
      *              '[optional] relative path from suite to test case'
      *          )
-     *      )
+     *      );
      *
      * @return \Net\Bazzline\KnowledgeTest\TestCase\Suite
      * @throws FactoryInvalidArgumentException
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-05-26
      */
-    public function fromSourceFile($filename)
+    public function fromSource($filename)
     {
         if ((!file_exists($filename))
             || (!is_readable($filename))) {

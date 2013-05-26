@@ -42,7 +42,7 @@ class AnswerFromPhpArrayFactory implements FactoryInterface
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-05-26
      */
-    public function fromSourceFile($source)
+    public function fromSource($source)
     {
         if (!is_array($source)) {
             throw new FactoryInvalidArgumentException(
