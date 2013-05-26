@@ -20,6 +20,13 @@ use Symfony\Component\Console\Output\OutputInterface;
 class TestCommand extends CommandAbstract
 {
     /**
+     * @var array
+     * @author stev leibelt <artodeto@arcor.de>
+     * @since 2013-05-26
+     */
+    private $suites;
+
+    /**
      * @param InputInterface $input
      * @param OutputInterface $output
      * @return int|null|void
@@ -28,45 +35,7 @@ class TestCommand extends CommandAbstract
      */
     public function execute(InputInterface $input, OutputInterface $output)
     {
-        $configuration = $this->getApplication()->getConfiguration();
-
-        $autoloaderFilepath = realpath($configuration->getFilepathAutoloader()) .
-            DIRECTORY_SEPARATOR . $configuration->getFilenameAutoloader();
-        $autoloaderWasWritten = false;
-        $classmapFilepath = realpath($configuration->getFilepathClassmap()) .
-            DIRECTORY_SEPARATOR . $configuration->getFilenameClassmap();
-        $classmapWasWritten = false;
-        $isForced = $input->getOption('force');
-        $onlyCreateClassmapFile = $input->getOption('classmap');
-        $onlyCreateAutoloaderFile = $input->getOption('autoloader');
-
-        if (!$onlyCreateAutoloaderFile) {
-            $output->writeln('<comment>Generating and writing classmap file.</comment> ');
-            $filepathIterator = $this->getFilepathIterator($configuration);
-            $classmapFileWriter = $this->getClassmapFileWriter($filepathIterator, $classmapFilepath);
-            $classmapWasWritten = $this->writeClassmap($classmapFileWriter, $isForced, $output);
-
-            if ($classmapWasWritten) {
-                $output->writeln('<info>Classmap was written to:</info> ' .
-                $classmapFilepath);
-            } else {
-                $output->writeln('<error>Classmap was not written.</error>');
-            }
-        }
-
-        if (!$onlyCreateClassmapFile
-            && $configuration->createAutoloaderFile()) {
-            $output->writeln('<comment>Generating and writing autoloader file.</comment> ');
-            $autoloaderFileWriter = $this->getAutoloaderFileWriter($autoloaderFilepath, $classmapFilepath);
-            $autoloaderWasWritten = $this->writeAutoloaderFile($autoloaderFileWriter, $isForced, $output);
-
-            if ($autoloaderWasWritten) {
-                $output->writeln('<info>Autoloader was written to:</info> ' .
-                $autoloaderFilepath);
-            } else {
-                $output->writeln('<error>Autoloader was not written.</error>');
-            }
-        }
+        $this->setupSuites($input, $output);
     }
 
     /**
@@ -80,7 +49,7 @@ class TestCommand extends CommandAbstract
             ->setDescription('Starts the available tests.')
             ->setDefinition(
                 array(
-                    new InputOption('--testsuite', '-t', InputOption::VALUE_NONE, 'Only use provided test suite.'),
+                    new InputOption('--suite', '-s', InputOption::VALUE_OPTIONAL, 'Only use provided test case suite.'),
                 )
             )
             ->setHelp(
@@ -88,5 +57,41 @@ class TestCommand extends CommandAbstract
                 'availalbe test suites.' . PHP_EOL
             )
         ;
+    }
+
+    /**
+     * Setup suites
+     *
+     * @param InputInterface $input
+     * @param OutputInterface $output
+     *
+     * @return OutputInterface
+     * @author stev leibelt <artodeto@arcor.de>
+     * @since 2013-05-26
+     */
+    private function setupSuites(InputInterface $input, OutputInterface $output)
+    {
+        $suite = $input->getOption('suite');
+        $suites = ($suite) ? array($suite) : array();
+
+        if ($suite) {
+            $output = $this->addComment($output, 'Using suite "' . $suite . '"');
+        } else {
+            $path = getcwd();
+            $output = $this->addComment($output, 'Searching for suites in path "' . $path . '"');
+            $suiteIterator = $this
+                ->getServiceLocator()
+                ->getNewSuiteFilterDirectoryIterator($path);
+
+            foreach ($suiteIterator as $suite) {
+                $suites[] = $suite;
+
+                $output = $this->addInfo($output, 'Found suite "' . $suite . '"');
+            }
+        }
+
+        $this->suites = $suites;
+
+        return $output;
     }
 }

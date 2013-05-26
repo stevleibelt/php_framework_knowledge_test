@@ -16,12 +16,15 @@ use Net\Bazzline\KnowledgeTest\Factory\TestCaseFromPhpArrayFactory;
 use Net\Bazzline\KnowledgeTest\Factory\SuiteFactory;
 use Net\Bazzline\KnowledgeTest\Factory\SuiteFromPhpArrayFactory;
 use Net\Bazzline\KnowledgeTest\Factory\SuiteFromXmlFactory;
+use Net\Bazzline\KnowledgeTest\Filesystem\SuiteFilterDirectoryIterator;
+use Net\Bazzline\KnowledgeTest\Filesystem\TestCaseFilterDirectoryIterator;
 use Net\Bazzline\KnowledgeTest\TestCase\Suite;
 use Net\Bazzline\KnowledgeTest\TestCase\TestCase;
 use Net\Bazzline\KnowledgeTest\TestCase\Question;
 use Net\Bazzline\KnowledgeTest\TestCase\SingleAnswer;
 use Net\Bazzline\KnowledgeTest\TestCase\MultipleAnswer;
 use Net\Bazzline\KnowledgeTest\TestCase\FreeTextAnswer;
+use DirectoryIterator;
 
 /**
  * Class ServiceLocator
@@ -223,6 +226,39 @@ class ServiceLocator
         $testCommand->setServiceLocator($this);
 
         return $testCommand;
+    }
+
+    /**
+     * @param $path
+     * @return DirectoryIterator
+     * @author stev leibelt <artodeto@arcor.de>
+     * @since 2013-05-26
+     */
+    public function getDirectoryIterator($path)
+    {
+        return new DirectoryIterator($path);
+    }
+
+    /**
+     * @param $path
+     * @return SuiteFilterDirectoryIterator
+     * @author stev leibelt <artodeto@arcor.de>
+     * @since 2013-05-26
+     */
+    public function getNewSuiteFilterDirectoryIterator($path)
+    {
+        return new SuiteFilterDirectoryIterator($this->getDirectoryIterator($path));
+    }
+
+    /**
+     * @param $path
+     * @return TestCaseFilterDirectoryIterator
+     * @author stev leibelt <artodeto@arcor.de>
+     * @since 2013-05-26
+     */
+    public function getNewTestCaseFilterDirectoryIterator($path)
+    {
+        return new TestCaseFilterDirectoryIterator($this->getDirectoryIterator($path));
     }
 
     /**

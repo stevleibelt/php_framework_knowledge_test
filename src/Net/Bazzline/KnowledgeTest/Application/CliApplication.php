@@ -47,8 +47,6 @@ class CliApplication extends SymfonyApplication
 
         $this->serviceLocator = new ServiceLocator();
 
-        $testCommand = $this->serviceLocator->getNewTestCommand();
-
-        $this->add($testCommand);
+        $this->add($this->serviceLocator->getNewTestCommand());
     }
 }
