@@ -8,6 +8,7 @@ namespace Net\Bazzline\KnowledgeTest\Factory;
 use Net\Bazzline\KnowledgeTest\TestCase\MultipleAnswer;
 use Net\Bazzline\KnowledgeTest\TestCase\SingleAnswer;
 use Net\Bazzline\KnowledgeTest\TestCase\FreeTextAnswer;
+use SimpleXMLElement;
 
 /**
  * Class AnswerFromXmlFactory
@@ -45,7 +46,7 @@ class AnswerFromXmlFactory extends FactoryAbstract implements FactoryFromSourceI
      *          Third Answer
      *      </validOpportunity>
      *
-     * @return \Net\Bazzline\KnowledgeTest\TestCase\Answer
+     * @return \Net\Bazzline\KnowledgeTest\TestCase\AnswerInterface
      * @throws FactoryInvalidArgumentException
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-05-26

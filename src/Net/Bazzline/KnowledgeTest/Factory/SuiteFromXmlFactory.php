@@ -6,7 +6,7 @@
 namespace Net\Bazzline\KnowledgeTest\Factory;
 
 use Net\Bazzline\KnowledgeTest\TestCase\Suite;
-use \SimpleXMLElement;
+use SimpleXMLElement;
 
 /**
  * Class SuiteFromXmlFactory

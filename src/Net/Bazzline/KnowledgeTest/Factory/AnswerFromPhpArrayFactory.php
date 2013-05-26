@@ -37,7 +37,7 @@ class AnswerFromPhpArrayFactory extends FactoryAbstract implements FactoryFromSo
      *          )
      *      )
      *
-     * @return \Net\Bazzline\KnowledgeTest\TestCase\Answer
+     * @return \Net\Bazzline\KnowledgeTest\TestCase\AnswerInterface
      * @throws FactoryInvalidArgumentException
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-05-26
