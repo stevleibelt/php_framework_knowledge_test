@@ -12,7 +12,7 @@ To sum up the goals, this project should:
 *  Create a interface for handeling different types of question/answere cases
 *  Implement a simple web application to do the knowledge test via a webbrowser
 *  Implement a console application to do the knowledge test via command line
-*  Create a question/answere case generator to easy up the case generation
+*  Create a question/answere case generator to easy up the test case generation
 
 ## Milestone
 
