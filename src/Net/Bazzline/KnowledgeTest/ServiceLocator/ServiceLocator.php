@@ -244,8 +244,10 @@ class ServiceLocator
     }
 
     /**
-     * @param $className
+     * @param string $className - full qualified class name
+     *
      * @return object
+     * @throws \InvalidArgumentException
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-05-26
      */
