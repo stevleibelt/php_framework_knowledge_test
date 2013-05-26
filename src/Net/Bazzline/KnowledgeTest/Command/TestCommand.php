@@ -24,7 +24,7 @@ class TestCommand extends CommandAbstract
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-05-26
      */
-    private $suites;
+    private $pathToSuites;
 
     /**
      * @param InputInterface $input
@@ -35,7 +35,19 @@ class TestCommand extends CommandAbstract
      */
     public function execute(InputInterface $input, OutputInterface $output)
     {
-        $this->setupSuites($input, $output);
+        $this->setupPathToSuites($input, $output);
+
+        if (empty($this->pathToSuites)) {
+            $this->addError($output, 'No suites available.');
+        } else {
+            $suites = array();
+            $suiteFactory = $this->getServiceLocator()->getSuiteFactory();
+
+            foreach ($this->pathToSuites as $pathToSuite) {
+                $factory = $suiteFactory->getFactoryByFilename($pathToSuite);
+                $suites[] = $factory->fromSource($pathToSuite);
+            }
+        }
     }
 
     /**
@@ -54,13 +66,13 @@ class TestCommand extends CommandAbstract
             )
             ->setHelp(
                 'The <info>%command.name%</info> command is executing all ' . PHP_EOL .
-                'availalbe test suites.' . PHP_EOL
+                'availalbe test pathToSuites.' . PHP_EOL
             )
         ;
     }
 
     /**
-     * Setup suites
+     * Setup pathToSuites
      *
      * @param InputInterface $input
      * @param OutputInterface $output
@@ -69,7 +81,7 @@ class TestCommand extends CommandAbstract
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-05-26
      */
-    private function setupSuites(InputInterface $input, OutputInterface $output)
+    private function setupPathToSuites(InputInterface $input, OutputInterface $output)
     {
         $suite = $input->getOption('suite');
         $suites = ($suite) ? array($suite) : array();
@@ -78,7 +90,7 @@ class TestCommand extends CommandAbstract
             $output = $this->addComment($output, 'Using suite "' . $suite . '"');
         } else {
             $path = getcwd();
-            $output = $this->addComment($output, 'Searching for suites in path "' . $path . '"');
+            $output = $this->addComment($output, 'Searching for pathToSuites in path "' . $path . '"');
             $suiteIterator = $this
                 ->getServiceLocator()
                 ->getNewSuiteFilterDirectoryIterator($path);
@@ -90,7 +102,7 @@ class TestCommand extends CommandAbstract
             }
         }
 
-        $this->suites = $suites;
+        $this->pathToSuites = $suites;
 
         return $output;
     }
