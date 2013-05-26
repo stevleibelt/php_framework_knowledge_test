@@ -46,6 +46,9 @@ class CliApplication extends SymfonyApplication
         parent::__construct(self::NAME, self::VERSION);
 
         $this->serviceLocator = new ServiceLocator();
-        //$this->add(new ManualCommand());
+
+        $testCommand = $this->serviceLocator->getNewTestCommand();
+
+        $this->add($testCommand);
     }
 }

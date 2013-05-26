@@ -5,6 +5,7 @@
  */
 namespace Net\Bazzline\KnowledgeTest\ServiceLocator;
 
+use Net\Bazzline\KnowledgeTest\Command\TestCommand;
 use Net\Bazzline\KnowledgeTest\Factory\AnswerFromPhpArrayFactory;
 use Net\Bazzline\KnowledgeTest\Factory\AnswerFromXmlFactory;
 use Net\Bazzline\KnowledgeTest\Factory\QuestionFromPhpArrayFactory;
@@ -21,7 +22,6 @@ use Net\Bazzline\KnowledgeTest\TestCase\Question;
 use Net\Bazzline\KnowledgeTest\TestCase\SingleAnswer;
 use Net\Bazzline\KnowledgeTest\TestCase\MultipleAnswer;
 use Net\Bazzline\KnowledgeTest\TestCase\FreeTextAnswer;
-use SimpleXMLElement;
 
 /**
  * Class ServiceLocator
@@ -210,6 +210,19 @@ class ServiceLocator
     public function getNewFreeTextAnswer()
     {
         return new FreeTextAnswer();
+    }
+
+    /**
+     * @return TestCommand
+     * @author stev leibelt <artodeto@arcor.de>
+     * @since 2013-05-26
+     */
+    public function getNewTestCommand()
+    {
+        $testCommand = new TestCommand();
+        $testCommand->setServiceLocator($this);
+
+        return $testCommand;
     }
 
     /**
