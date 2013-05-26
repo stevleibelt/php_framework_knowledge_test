@@ -29,6 +29,7 @@ interface ServiceLocatorAwareInterface
      *
      * @param ServiceLocator $serviceLocator - the service locator
      *
+     * @return object - current class for fluent interface
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-05-26
      */
