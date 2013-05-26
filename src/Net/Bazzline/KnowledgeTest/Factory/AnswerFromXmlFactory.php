@@ -51,7 +51,7 @@ class AnswerFromXmlFactory implements FactoryInterface
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-05-26
      */
-    public function fromSource($source)
+    public function fromSourceFile($source)
     {
         $simpleXml = new SimpleXMLElement($source);
 

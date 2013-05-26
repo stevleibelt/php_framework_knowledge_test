@@ -19,7 +19,7 @@ class SuiteFromPhpArrayFactory implements FactoryInterface
     /**
      * Creates object
      *
-     * @param mixed $source - the source
+     * @param mixed $filename - the source
      *  example:
      *      array(
      *          'name' => 'Example suite',
@@ -36,31 +36,41 @@ class SuiteFromPhpArrayFactory implements FactoryInterface
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-05-26
      */
-    public function fromSource($source)
+    public function fromSourceFile($filename)
     {
-        if (!is_array($source)) {
+        if ((!file_exists($filename))
+            || (!is_readable($filename))) {
+            throw new FactoryInvalidArgumentException(
+                'Source filename does not exists or is not readable'
+            );
+        }
+
+        $array = require_once($filename);
+
+        if (!is_array($array)) {
             throw new FactoryInvalidArgumentException(
                 'Source has to be from type array'
             );
         }
 
-        if (!isset($source['pathToTestCases'])
-            || empty($source['pathToTestCases'])) {
+        if (!isset($array['pathToTestCases'])
+            || empty($array['pathToTestCases'])) {
             throw new FactoryInvalidArgumentException(
                 'No test cases found in suite'
             );
         }
 
         $suite = new Suite();
+        $factory = new TestCaseFactory();
 
-        $suite->setName($source['name']);
-        $suite->setLanguage($source['language']);
-        $suite->setDescription($source['description']);
-        foreach ($source['pathToTestCases'] as $pathToTestCase) {
-            if (file_exists($pathToTestCase)
-                && is_readable($pathToTestCase)) {
-                $testCaseArray = require_once $pathToTestCase;
-                $testCase = TestCaseFromPhpArrayFactory::fromSource($testCaseArray);
+        $suite->setName($array['name']);
+        $suite->setLanguage($array['language']);
+        $suite->setDescription($array['description']);
+        foreach ($array['pathToTestCases'] as $testCaseFilename) {
+            if (file_exists($testCaseFilename)
+                && is_readable($testCaseFilename)) {
+                $testCaseFactory = $factory->getFactoryByFilename($testCaseFilename);
+                $testCase = $testCaseFactory->fromSourceFile($testCaseFilename);
                 $suite->addTestCase($testCase);
             }
         }

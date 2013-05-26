@@ -44,7 +44,7 @@ class TestCaseFromPhpArrayFactory implements FactoryInterface
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-05-26
      */
-    public function fromSource($source)
+    public function fromSourceFile($source)
     {
         if (!is_array($source)) {
             throw new FactoryInvalidArgumentException(
@@ -68,8 +68,8 @@ class TestCaseFromPhpArrayFactory implements FactoryInterface
         $questionFactory = new QuestionFromPhpArrayFactory();
         $answerFactory = new AnswerFromPhpArrayFactory();
 
-        $question = $questionFactory->fromSource($source['question']);
-        $answer = $answerFactory->fromSource($source['answer']);
+        $question = $questionFactory->fromSourceFile($source['question']);
+        $answer = $answerFactory->fromSourceFile($source['answer']);
 
         $testCase->setQuestion($question);
         $testCase->setAnswer($answer);

@@ -20,7 +20,7 @@ class SuiteFromXmlFactory implements FactoryInterface
     /**
      * Creates object
      *
-     * @param mixed $source - the source
+     * @param mixed $filename - the source
      *  example:
      *      <?xml version="1.0" encoding="utf-8" ?>
      *      <name>
@@ -44,9 +44,18 @@ class SuiteFromXmlFactory implements FactoryInterface
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-05-26
      */
-    public function fromSource($source)
+    public function fromSourceFile($filename)
     {
-        $simpleXml = new SimpleXMLElement($source);
+        if ((!file_exists($filename))
+            || (!is_readable($filename))) {
+            throw new FactoryInvalidArgumentException(
+                'Source filename does not exists or is not readable'
+            );
+        }
+
+        $simpleXml = new SimpleXMLElement(
+            file_get_contents($filename)
+        );
 
         $pathsToTestCase = (array) $simpleXml->pathToTextCase;
         if (empty($pathsToTestCase)) {
@@ -56,15 +65,16 @@ class SuiteFromXmlFactory implements FactoryInterface
         }
 
         $suite = new Suite();
+        $factory = new TestCaseFactory();
 
         $suite->setName($simpleXml->name);
         $suite->setLanguage($simpleXml->language);
         $suite->setDescription($simpleXml->description);
-        foreach ($pathsToTestCase as $pathToTestCase) {
-            if (file_exists($pathToTestCase)
-                && is_readable($pathToTestCase)) {
-                $testCaseXml = file_get_contents($pathToTestCase);
-                $testCase = TestCaseFromSimpleXmlFactory::fromSource($testCaseXml);
+        foreach ($pathsToTestCase as $testCaseFilename) {
+            if (file_exists($testCaseFilename)
+                && is_readable($testCaseFilename)) {
+                $testCaseFactory = $factory->getFactoryByFilename($testCaseFilename);
+                $testCase = $testCaseFactory->fromSourceFile($testCaseFilename);
                 $suite->addTestCase($testCase);
             }
         }
