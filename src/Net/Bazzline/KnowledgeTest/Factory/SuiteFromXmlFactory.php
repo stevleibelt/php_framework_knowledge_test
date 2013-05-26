@@ -20,7 +20,7 @@ class SuiteFromXmlFactory implements FactoryInterface
     /**
      * Creates object
      *
-     * @param mixed $filename - the source
+     * @param string $filename - the source
      *  example:
      *      <?xml version="1.0" encoding="utf-8" ?>
      *      <name>

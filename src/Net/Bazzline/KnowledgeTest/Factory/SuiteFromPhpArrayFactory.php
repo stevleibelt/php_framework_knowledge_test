@@ -19,7 +19,7 @@ class SuiteFromPhpArrayFactory implements FactoryInterface
     /**
      * Creates object
      *
-     * @param mixed $filename - the source
+     * @param string $filename - the source
      *  example:
      *      return array(
      *          'name' => 'Example suite',

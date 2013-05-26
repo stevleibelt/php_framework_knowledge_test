@@ -21,9 +21,8 @@ class AnswerFromXmlFactory implements FactoryInterface
     /**
      * Creates object
      *
-     * @param mixed $source - the source
+     * @param string $source - the source
      *  example:
-     *      <?xml version="1.0" encoding="utf-8" ?>
      *      <type>
      *          SelectMultipleAnswer
      *      </type>

@@ -21,7 +21,7 @@ class AnswerFromPhpArrayFactory implements FactoryInterface
     /**
      * Creates object
      *
-     * @param mixed $source - the source
+     * @param array $source - the source
      *  example:
      *      array(
      *          'type' => 'SelectMultipleAnswer',

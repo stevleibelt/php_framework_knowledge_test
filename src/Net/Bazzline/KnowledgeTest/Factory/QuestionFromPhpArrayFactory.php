@@ -19,7 +19,7 @@ class QuestionFromPhpArrayFactory implements FactoryInterface
     /**
      * Creates object
      *
-     * @param mixed $source - the source
+     * @param array $source - the source
      *  example:
      *      array(
      *          'problemDefinition' => 'This is an example problem',
