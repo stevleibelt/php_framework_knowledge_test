@@ -14,7 +14,7 @@ use Net\Bazzline\KnowledgeTest\TestCase\Question;
  * @author stev leibelt <artodeto@arcor.de>
  * @since 2013-05-26
  */
-class QuestionFromPhpArrayFactory extends FactoryAbstract
+class QuestionFromPhpArrayFactory extends FactoryAbstract implements FactoryFromSourceInterface
 {
     /**
      * Creates object

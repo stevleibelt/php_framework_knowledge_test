@@ -15,7 +15,7 @@ use \SimpleXMLElement;
  * @author stev leibelt <artodeto@arcor.de>
  * @since 2013-05-26
  */
-class SuiteFromXmlFactory extends FactoryAbstract
+class SuiteFromXmlFactory extends FactoryAbstract implements FactoryFromSourceInterface
 {
     /**
      * Creates object

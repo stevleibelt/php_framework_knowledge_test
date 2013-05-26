@@ -16,10 +16,18 @@ To sum up the goals, this project should:
 
 ## Milestone
 
-* [v0.0.1] - testcase and factories are working
-* [v0.8.0] - example suite is working on cli
-* [v0.9.0] - testcase generator is working
-* [v1.0.0] - stable TestCase Interface
-* [v1.5.0] - unittests
-* [v2.0.0] - example suite is working on web application
-* [v3.0.0] - full and easy customize web application
+* [v0.0.1] - [done] - finished Factory directory
+* [v0.0.2] - [todo] - finished TestCase directory
+* [v0.0.3] - [todo] - finished Command directory
+* [v0.0.4] - [todo] - finished CliApplication
+* [v0.1.0] - [todo] - example suite is working on cli
+* [v0.2.0] - [todo] - testcase generator is working
+* [v0.1.1] - [todo] - finished Configuration directory
+* [v1.0.0] - [todo] - stable TestCase Interface
+* [v1.5.0] - [todo] - unittests
+* [v1.9.1] - [todo] - finished Layout directory
+* [v1.9.2] - [todo] - finished View directory
+* [v1.9.3] - [todo] - finished Controller directory
+* [v1.9.4] - [todo] - finished WebApplication
+* [v2.0.0] - [todo] - example suite is working on web application
+* [v3.0.0] - [todo] - full and easy customize web application
