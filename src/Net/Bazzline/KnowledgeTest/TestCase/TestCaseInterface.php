@@ -58,23 +58,4 @@ interface TestCaseInterface
      * @since 2013-05-25
      */
     public function setQuestion(QuestionInterface $question);
-
-    /**
-     * Returns a number that indicates what kind of challenge the current
-     *  test case is,
-     *
-     * @return integer
-     * @author stev leibelt <artodeto@arcor.de>
-     * @since 2013-05-25
-     */
-    public function getLevelOfDifficulty();
-
-    /**
-     * Returns a ISO 639-1 language code.
-     *
-     * @return string
-     * @author stev leibelt <artodeto@arcor.de>
-     * @since 2013-05-25
-     */
-    public function getLanguageCode();
 }

@@ -1,11 +1,21 @@
 <?php
-
+/**
+ * @author stev leibelt <artodeto@arcor.de>
+ * @since 2013-05-26
+ */
 namespace Net\Bazzline\KnowledgeTest\TestCase;
 
-use Net\Bazzline\TestCase\Answer;
-use Net\Bazzline\TestCase\Question;
+use Net\Bazzline\KnowledgeTest\TestCase\AnswerInterface;
+use Net\Bazzline\KnowledgeTest\TestCase\QuestionInterface;
 
-abstract class TestCaseAbstract implements TestCaseInterface
+/**
+ * Class TestCase
+ *
+ * @package Net\Bazzline\KnowledgeTest\TestCase
+ * @author stev leibelt <artodeto@arcor.de>
+ * @since 2013-05-26
+ */
+class TestCase implements TestCaseInterface
 {
     /**
      * @var AnswerInterface
