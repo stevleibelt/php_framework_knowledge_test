@@ -14,7 +14,7 @@ use Net\Bazzline\KnowledgeTest\TestCase\Suite;
  * @author stev leibelt <artodeto@arcor.de>
  * @since 2013-05-26
  */
-class SuiteFromPhpArrayFactory implements FactoryInterface
+class SuiteFromPhpArrayFactory extends FactoryAbstract
 {
     /**
      * Creates object

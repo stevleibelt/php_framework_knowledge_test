@@ -16,7 +16,7 @@ use Net\Bazzline\KnowledgeTest\TestCase\FreeTextAnswer;
  * @author stev leibelt <artodeto@arcor.de>
  * @since 2013-05-26
  */
-class AnswerFromPhpArrayFactory implements FactoryInterface
+class AnswerFromPhpArrayFactory extends FactoryAbstract
 {
     /**
      * Creates object

@@ -15,7 +15,7 @@ use SimpleXMLElement;
  * @author stev leibelt <artodeto@arcor.de>
  * @since 2013-05-26
  */
-class TestCaseFromXmlFactory implements FactoryInterface
+class TestCaseFromXmlFactory extends FactoryAbstract
 {
     /**
      * Creates object
