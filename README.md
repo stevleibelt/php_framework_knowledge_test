@@ -17,7 +17,7 @@ To sum up the goals, this project should:
 ## Milestone
 
 * [v0.0.1] - [done] - finished Factory directory
-* [v0.0.2] - [todo] - finished TestCase directory
+* [v0.0.2] - [done] - finished TestCase directory
 * [v0.0.3] - [todo] - finished Command directory
 * [v0.0.4] - [todo] - finished CliApplication
 * [v0.0.5] - [todo] - unittests
