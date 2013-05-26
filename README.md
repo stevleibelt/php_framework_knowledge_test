@@ -20,11 +20,11 @@ To sum up the goals, this project should:
 * [v0.0.2] - [todo] - finished TestCase directory
 * [v0.0.3] - [todo] - finished Command directory
 * [v0.0.4] - [todo] - finished CliApplication
+* [v0.0.5] - [todo] - unittests
 * [v0.1.0] - [todo] - example suite is working on cli
 * [v0.2.0] - [todo] - testcase generator is working
 * [v0.1.1] - [todo] - finished Configuration directory
 * [v1.0.0] - [todo] - stable TestCase Interface
-* [v1.5.0] - [todo] - unittests
 * [v1.9.1] - [todo] - finished Layout directory
 * [v1.9.2] - [todo] - finished View directory
 * [v1.9.3] - [todo] - finished Controller directory
