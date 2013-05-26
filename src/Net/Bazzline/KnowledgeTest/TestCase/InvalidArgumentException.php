@@ -5,13 +5,13 @@
  */
 namespace Net\Bazzline\KnowledgeTest\TestCase;
 
-use RuntimeException;
+use InvalidArgumentException as RootException;
 
 /**
- * Class TestCaseRuntimeException
+ * Class TestCaseInvalidArgumentException
  *
  * @package Net\Bazzline\TestCase
  * @author stev leibelt <artodeto@arcor.de>
  * @since 2013-05-25
  */
-class TestCaseRuntimeException extends RuntimeException {}
+class InvalidArgumentException extends RootException {}

@@ -31,7 +31,7 @@ class SuiteFromPhpArrayFactory extends FactoryAbstract implements FactoryFromSou
      *          )
      *      );
      *
-     * @return \Net\Bazzline\KnowledgeTest\TestCase\Suite
+     * @return \Net\Bazzline\KnowledgeTest\TestCase\SuiteInterface
      * @throws FactoryInvalidArgumentException
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-05-26

@@ -58,7 +58,7 @@ class Question implements QuestionInterface
     public function setHint($hint)
     {
         if (strlen((string) $hint) > 1) {
-            throw new TestCaseInvalidArgumentException(
+            throw new InvalidArgumentException(
                 'Hint must have at least one character.'
             );
         }
@@ -74,7 +74,7 @@ class Question implements QuestionInterface
     public function setProblemDefinition($problemDefinition)
     {
         if (strlen((string) $problemDefinition) > 1) {
-            throw new TestCaseInvalidArgumentException(
+            throw new InvalidArgumentException(
                 'Problem definition must have at least one character.'
             );
         }

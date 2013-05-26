@@ -39,7 +39,7 @@ class SuiteFromXmlFactory extends FactoryAbstract implements FactoryFromSourceIn
      *          [optional] relative path from suite to test case
      *      </pathToTestCase>
      *
-     * @return \Net\Bazzline\KnowledgeTest\TestCase\Suite
+     * @return \Net\Bazzline\KnowledgeTest\TestCase\SuiteInterface
      * @throws FactoryInvalidArgumentException
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-05-26

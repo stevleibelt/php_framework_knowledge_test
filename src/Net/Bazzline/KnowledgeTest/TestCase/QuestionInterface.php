@@ -47,7 +47,7 @@ interface QuestionInterface
      * @param string $hint - the hint
      *
      * @return QuestionInterface
-     * @throws TestCaseInvalidArgumentException
+     * @throws InvalidArgumentException
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-05-26
      */
@@ -59,7 +59,7 @@ interface QuestionInterface
      * @param string $problemDefinition - the question
      *
      * @return QuestionInterface
-     * @throws TestCaseInvalidArgumentException
+     * @throws InvalidArgumentException
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-05-26
      */

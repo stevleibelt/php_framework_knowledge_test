@@ -30,7 +30,7 @@ abstract class TestCaseAbstract implements TestCaseInterface
     public function getAnswer()
     {
         if (is_null($this->answer)) {
-            throw new TestCaseRuntimeException(
+            throw new RuntimeException(
                 'Answer not set.'
             );
         }
@@ -60,7 +60,7 @@ abstract class TestCaseAbstract implements TestCaseInterface
     public function getQuestion()
     {
         if (is_null($this->question)) {
-            throw new TestCaseRuntimeException(
+            throw new RuntimeException(
                 'Question not set.'
             );
         }

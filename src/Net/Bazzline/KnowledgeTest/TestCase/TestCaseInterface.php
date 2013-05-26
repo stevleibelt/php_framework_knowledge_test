@@ -21,7 +21,7 @@ interface TestCaseInterface
      * Getter for answer
      *
      * @return AnswerInterface
-     * @throws TestCaseRuntimeException
+     * @throws RuntimeException
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-05-25
      */
@@ -42,7 +42,7 @@ interface TestCaseInterface
      * Getter for question
      *
      * @return QuestionInterface
-     * @throws TestCaseRuntimeException
+     * @throws RuntimeException
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-05-25
      */
