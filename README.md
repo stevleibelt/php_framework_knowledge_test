@@ -13,3 +13,13 @@ To sum up the goals, this project should:
 *  Implement a simple web application to do the knowledge test via a webbrowser
 *  Implement a console application to do the knowledge test via command line
 *  Create a question/answere case generator to easy up the case generation
+
+## Milestone
+
+* [v0.0.1] - testcase and factories are working
+* [v0.8.0] - example suite is working on cli
+* [v0.9.0] - testcase generator is working
+* [v1.0.0] - stable TestCase Interface
+* [v1.5.0] - unittests
+* [v2.0.0] - example suite is working on web application
+* [v3.0.0] - full and easy customize web application
