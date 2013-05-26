@@ -51,8 +51,7 @@ class SuiteFactory extends FactoryAbstract
 
         if (strripos('php', $filename. -3) !== false) {
             if (!isset($this->instancePool['php'])) {
-                $factory = new SuiteFromPhpArrayFactory();
-                $factory->setServiceLocator($this->getServiceLocator());
+                $factory = $this->serviceLocator->getSuiteFromPhpArrayFactory();
 
                 $this->instancePool['php'] = $factory;
             }
@@ -62,8 +61,7 @@ class SuiteFactory extends FactoryAbstract
 
         if (strripos('xml', $filename. -3) !== false) {
             if (!isset($this->instancePool['xml'])) {
-                $factory = new SuiteFromXmlFactory();
-                $factory->setServiceLocator($this->getServiceLocator());
+                $factory = $this->serviceLocator->getSuiteFromXmlFactory();
 
                 $this->instancePool['xml'] = $factory;
             }

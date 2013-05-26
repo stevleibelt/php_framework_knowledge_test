@@ -18,7 +18,12 @@ use Net\Bazzline\KnowledgeTest\ServiceLocator\ServiceLocatorAwareInterface;
  */
 abstract class FactoryAbstract implements ServiceLocatorAwareInterface
 {
-    private $serviceLocator;
+    /**
+     * @var ServiceLocator
+     * @author stev leibelt <artodeto@arcor.de>
+     * @since 2013-05-26
+     */
+    protected  $serviceLocator;
 
     /**
      * Getter for service locator

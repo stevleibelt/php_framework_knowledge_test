@@ -5,8 +5,6 @@
  */
 namespace Net\Bazzline\KnowledgeTest\Factory;
 
-use Net\Bazzline\KnowledgeTest\TestCase\Suite;
-
 /**
  * Class SuiteFromPhpArrayFactory
  *
@@ -60,8 +58,8 @@ class SuiteFromPhpArrayFactory extends FactoryAbstract implements FactoryFromSou
             );
         }
 
-        $suite = new Suite();
-        $factory = new TestCaseFactory();
+        $suite = $this->serviceLocator->getNewSuite();
+        $factory = $this->serviceLocator->getTestCaseFactory();
 
         $suite->setName($array['name']);
         $suite->setLanguage($array['language']);
@@ -70,7 +68,7 @@ class SuiteFromPhpArrayFactory extends FactoryAbstract implements FactoryFromSou
             if (file_exists($testCaseFilename)
                 && is_readable($testCaseFilename)) {
                 $testCaseFactory = $factory->getFactoryByFilename($testCaseFilename);
-                $testCase = $testCaseFactory->fromSourceFile($testCaseFilename);
+                $testCase = $testCaseFactory->fromSource($testCaseFilename);
                 $suite->addTestCase($testCase);
             }
         }

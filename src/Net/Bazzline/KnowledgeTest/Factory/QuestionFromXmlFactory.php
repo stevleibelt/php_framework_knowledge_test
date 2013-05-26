@@ -44,7 +44,7 @@ class QuestionFromXmlFactory extends FactoryAbstract implements FactoryFromSourc
             );
         }
 
-        $question = new Question();
+        $question = $this->serviceLocator->getNewQuestion();
 
         $question->setProblemDefinition($simpleXml->problemDefinition);
         if (isset($simpleXml->hint)) {

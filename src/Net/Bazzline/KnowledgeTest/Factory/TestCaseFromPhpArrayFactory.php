@@ -73,9 +73,9 @@ class TestCaseFromPhpArrayFactory extends FactoryAbstract implements FactoryFrom
             );
         }
 
-        $testCase = new TestCase();
-        $questionFactory = new QuestionFromPhpArrayFactory();
-        $answerFactory = new AnswerFromPhpArrayFactory();
+        $testCase = $this->serviceLocator->getNewTestCase();
+        $questionFactory = $this->serviceLocator->getQuestionFromPhpArrayFactory();
+        $answerFactory = $this->serviceLocator->getAnswerFromPhpArrayFactory();
 
         $question = $questionFactory->fromSource($array['question']);
         $answer = $answerFactory->fromSource($array['answer']);

@@ -5,7 +5,6 @@
  */
 namespace Net\Bazzline\KnowledgeTest\Factory;
 
-use Net\Bazzline\KnowledgeTest\TestCase\Suite;
 use SimpleXMLElement;
 
 /**
@@ -64,8 +63,8 @@ class SuiteFromXmlFactory extends FactoryAbstract implements FactoryFromSourceIn
             );
         }
 
-        $suite = new Suite();
-        $factory = new TestCaseFactory();
+        $suite = $this->serviceLocator->getNewSuite();
+        $factory = $this->serviceLocator->getTestCaseFactory();
 
         $suite->setName($simpleXml->name);
         $suite->setLanguage($simpleXml->language);
@@ -74,7 +73,7 @@ class SuiteFromXmlFactory extends FactoryAbstract implements FactoryFromSourceIn
             if (file_exists($testCaseFilename)
                 && is_readable($testCaseFilename)) {
                 $testCaseFactory = $factory->getFactoryByFilename($testCaseFilename);
-                $testCase = $testCaseFactory->fromSourceFile($testCaseFilename);
+                $testCase = $testCaseFactory->fromSource($testCaseFilename);
                 $suite->addTestCase($testCase);
             }
         }

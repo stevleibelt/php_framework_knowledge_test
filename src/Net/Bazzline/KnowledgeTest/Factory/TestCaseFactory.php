@@ -51,8 +51,7 @@ class TestCaseFactory extends FactoryAbstract
 
         if (strripos('php', $filename. -3) !== false) {
             if (!isset($this->instancePool['php'])) {
-                $factory = new TestCaseFromPhpArrayFactory();
-                $factory->setServiceLocator($this->getServiceLocator());
+                $factory = $this->serviceLocator->getTestCaseFromPhpArrayFactory();
 
                 $this->instancePool['php'] = $factory;
             }
@@ -62,8 +61,7 @@ class TestCaseFactory extends FactoryAbstract
 
         if (strripos('xml', $filename. -3) !== false) {
             if (!isset($this->instancePool['xml'])) {
-                $factory = new TestCaseFromXmlFactory();
-                $factory->setServiceLocator($this->getServiceLocator());
+                $factory = $this->serviceLocator->getTestCaseFromXmlFactory();
 
                 $this->instancePool['xml'] = $factory;
             }

@@ -85,9 +85,9 @@ class TestCaseFromXmlFactory extends FactoryAbstract implements FactoryFromSourc
             );
         }
 
-        $testCase = new TestCase();
-        $questionFactory = new QuestionFromXmlFactory();
-        $answerFactory = new AnswerFromXmlFactory();
+        $testCase = $this->serviceLocator->getNewTestCase();
+        $questionFactory = $this->serviceLocator->getQuestionFromXmlFactory();
+        $answerFactory = $this->serviceLocator->getAnswerFromXmlFactory();
 
         $question = $questionFactory->fromSource($simpleXml->question);
         $answer = $answerFactory->fromSource($simpleXml->answer);

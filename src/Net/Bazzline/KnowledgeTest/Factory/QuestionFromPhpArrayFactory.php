@@ -45,7 +45,7 @@ class QuestionFromPhpArrayFactory extends FactoryAbstract implements FactoryFrom
             );
         }
 
-        $question = new Question();
+        $question = $this->serviceLocator->getNewQuestion();
 
         $question->setProblemDefinition($source['problemDefinition']);
         if (isset($source['hint'])) {
