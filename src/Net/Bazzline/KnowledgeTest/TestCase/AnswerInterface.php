@@ -63,7 +63,7 @@ interface AnswerInterface
     /**
      * Returns type of answer
      *
-     * @return integer
+     * @return string
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-05-25
      */
