@@ -86,7 +86,10 @@ interface SuiteInterface
     public function getTestCases();
 
     /**
+     * Adds a test case.
+     *
      * @param TestCaseInterface $testCase - a test case
+     *
      * @return SuiteInterface
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-05-26
