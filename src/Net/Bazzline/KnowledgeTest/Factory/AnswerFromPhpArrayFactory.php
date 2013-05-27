@@ -56,13 +56,17 @@ class AnswerFromPhpArrayFactory extends FactoryAbstract implements FactoryFromSo
             );
         }
 
-        if (!isset($source['opportunities'])) {
+        if ((!isset($source['opportunities']))
+            || (!is_array($source['opportunities']))
+            || (empty($source['opportunities']))) {
             throw new FactoryInvalidArgumentException(
                 'No opportunities found in source array'
             );
         }
 
-        if (!isset($source['validOpportunities'])) {
+        if ((!isset($source['validOpportunities']))
+            || (!is_array($source['validOpportunities']))
+            || (empty($source['validOpportunities']))) {
             throw new FactoryInvalidArgumentException(
                 'No valid opportunities found in source array'
             );

@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "f9f3cf71a5664d2f5d8545946789ff44",
+    "hash": "8fdb48604352fadb2c26131014608766",
     "packages": [
         {
             "name": "symfony/console",
@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Console.git",
-                "reference": "f73e1339b46c92426a7c6d28cfc4be931ca19db6"
+                "reference": "602d610387a4f703aea12ec65a4d947e0ee7ce5f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Console/zipball/f73e1339b46c92426a7c6d28cfc4be931ca19db6",
-                "reference": "f73e1339b46c92426a7c6d28cfc4be931ca19db6",
+                "url": "https://api.github.com/repos/symfony/Console/zipball/602d610387a4f703aea12ec65a4d947e0ee7ce5f",
+                "reference": "602d610387a4f703aea12ec65a4d947e0ee7ce5f",
                 "shasum": ""
             },
             "require": {
@@ -50,7 +50,7 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "http://symfony.com",
-            "time": "2013-05-19 19:04:48"
+            "time": "2013-05-27 14:47:40"
         }
     ],
     "packages-dev": [
