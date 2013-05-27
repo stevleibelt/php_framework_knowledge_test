@@ -61,8 +61,9 @@ class TestCommand extends CommandAbstract
             ->setDescription('Starts the available tests.')
             ->setDefinition(
                 array(
-                    new InputOption('--suite', '-s', InputOption::VALUE_OPTIONAL, 'Only use provided test case suite.'),
-                    new InputOption('--path', '-p', InputOption::VALUE_OPTIONAL, 'Only use provided path to search for suites.')
+                    new InputArgument('--testcase', '-tc', InputOption::VALUE_IS_ARRAY, 'Provided path to test case.'),
+                    new InputArgument('--suite', '-s', InputOption::VALUE_IS_ARRAY, 'Provided path to test case suite.'),
+                    new InputArgument('--path', '-p', InputOption::VALUE_OPTIONAL, 'Provided path to search for suites.')
                 )
             )
             ->setHelp(
