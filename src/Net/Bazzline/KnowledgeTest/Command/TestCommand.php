@@ -62,6 +62,7 @@ class TestCommand extends CommandAbstract
             ->setDefinition(
                 array(
                     new InputOption('--suite', '-s', InputOption::VALUE_OPTIONAL, 'Only use provided test case suite.'),
+                    new InputOption('--path', '-p', InputOption::VALUE_OPTIONAL, 'Only use provided path to search for suites.')
                 )
             )
             ->setHelp(
