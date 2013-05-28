@@ -62,7 +62,7 @@ class AnswerFromPhpArrayFactoryTest extends PHPUnit_Framework_TestCase
 
     /**
      * @expectedException \Net\Bazzline\KnowledgeTest\Factory\FactoryInvalidArgumentException
-     * @exceptedExceptionMessage Source has to be from type array
+     * @expectedExceptionMessage Source has to be from type array
      * @dataProvider dataProviderInvalidArray
      *
      * @param mixed $source - the invalid source
@@ -77,7 +77,7 @@ class AnswerFromPhpArrayFactoryTest extends PHPUnit_Framework_TestCase
 
     /**
      * @expectedException \Net\Bazzline\KnowledgeTest\Factory\FactoryInvalidArgumentException
-     * @exceptedExceptionMessage No type found in source array
+     * @expectedExceptionMessage No type found in source array
      *
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-05-28
@@ -90,7 +90,7 @@ class AnswerFromPhpArrayFactoryTest extends PHPUnit_Framework_TestCase
 
     /**
      * @expectedException \Net\Bazzline\KnowledgeTest\Factory\FactoryInvalidArgumentException
-     * @exceptedExceptionMessage Not supported type found in source array
+     * @expectedExceptionMessage Not supported type found in source array
      *
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-05-28
@@ -103,7 +103,7 @@ class AnswerFromPhpArrayFactoryTest extends PHPUnit_Framework_TestCase
 
     /**
      * @expectedException \Net\Bazzline\KnowledgeTest\Factory\FactoryInvalidArgumentException
-     * @exceptedExceptionMessage No opportunities found in source array
+     * @expectedExceptionMessage No opportunities found in source array
      *
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-05-28
@@ -116,7 +116,7 @@ class AnswerFromPhpArrayFactoryTest extends PHPUnit_Framework_TestCase
 
     /**
      * @expectedException \Net\Bazzline\KnowledgeTest\Factory\FactoryInvalidArgumentException
-     * @exceptedExceptionMessage No valid opportunities found in source array
+     * @expectedExceptionMessage No valid opportunities found in source array
      *
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-05-28
@@ -129,7 +129,7 @@ class AnswerFromPhpArrayFactoryTest extends PHPUnit_Framework_TestCase
 
     /**
      * @expectedException \Net\Bazzline\KnowledgeTest\Factory\FactoryInvalidArgumentException
-     * @exceptedExceptionMessage No opportunities found in source array
+     * @expectedExceptionMessage No opportunities found in source array
      *
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-05-28
@@ -142,7 +142,7 @@ class AnswerFromPhpArrayFactoryTest extends PHPUnit_Framework_TestCase
 
     /**
      * @expectedException \Net\Bazzline\KnowledgeTest\Factory\FactoryInvalidArgumentException
-     * @exceptedExceptionMessage No valid opportunities found in source array
+     * @expectedExceptionMessage No valid opportunities found in source array
      *
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-05-28
@@ -155,7 +155,7 @@ class AnswerFromPhpArrayFactoryTest extends PHPUnit_Framework_TestCase
 
     /**
      * @expectedException \Net\Bazzline\KnowledgeTest\Factory\FactoryInvalidArgumentException
-     * @exceptedExceptionMessage No opportunities found in source array
+     * @expectedExceptionMessage No opportunities found in source array
      * @dataProvider dataProviderInvalidArray
      *
      * @author stev leibelt <artodeto@arcor.de>
@@ -169,7 +169,7 @@ class AnswerFromPhpArrayFactoryTest extends PHPUnit_Framework_TestCase
 
     /**
      * @expectedException \Net\Bazzline\KnowledgeTest\Factory\FactoryInvalidArgumentException
-     * @exceptedExceptionMessage No valid opportunities found in source array
+     * @expectedExceptionMessage No valid opportunities found in source array
      * @dataProvider dataProviderInvalidArray
      *
      * @author stev leibelt <artodeto@arcor.de>
