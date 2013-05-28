@@ -53,7 +53,7 @@ abstract class AnswerAbstract implements AnswerInterface
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-05-26
      */
-    public function getOpportunites()
+    public function getOpportunities()
     {
         return $this->opportunities;
     }

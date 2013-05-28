@@ -180,4 +180,25 @@ class AnswerFromPhpArrayFactoryTest extends PHPUnit_Framework_TestCase
         $this->array['validOpportunities'] = $source;
         $this->factory->fromSource($this->array);
     }
+
+    public function testFromSourceWithValidArray()
+    {
+        $answer = $this->factory->fromSource($this->array);
+
+        foreach ($this->array as $key => $value) {
+            $methodName = 'get' . ucfirst($key);
+
+            if (is_array($value)) {
+                $this->assertEquals(
+                    array_values($value),
+                    array_values($answer->$methodName())
+                );
+            } else {
+                $this->assertEquals(
+                    $value,
+                    $answer->$methodName()
+                );
+            }
+        }
+    }
 }

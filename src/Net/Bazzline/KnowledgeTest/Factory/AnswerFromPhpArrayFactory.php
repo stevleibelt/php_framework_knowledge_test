@@ -72,8 +72,8 @@ class AnswerFromPhpArrayFactory extends FactoryAbstract implements FactoryFromSo
             );
         }
 
-        $answerClass = $source['type'];
-        if (!class_exists('Net\\Bazzline\\KnowledgeTest\\TestCase\\' . $answerClass)) {
+        $answerClass = 'Net\\Bazzline\\KnowledgeTest\\TestCase\\' . $source['type'];
+        if (!class_exists($answerClass)) {
             throw new FactoryInvalidArgumentException(
                 'Not supported type found in source array'
             );

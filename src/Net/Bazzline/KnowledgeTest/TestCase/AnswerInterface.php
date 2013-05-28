@@ -21,7 +21,7 @@ interface AnswerInterface
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-05-25
      */
-    public function getOpportunites();
+    public function getOpportunities();
 
     /**
      *
