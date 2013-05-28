@@ -16,7 +16,8 @@
     "minimum-stability": "dev",
     "require": {
         "php": ">=5.3.3",
-        "symfony/console": "2.2.*@dev"
+        "symfony/console": "2.2.*@dev",
+        "net_bazzline/php_symfony_console_command" : "dev-master"
     },
     "require-dev": {
         "phpunit/phpunit": "3.7.*",

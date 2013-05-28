@@ -3,8 +3,61 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "8fdb48604352fadb2c26131014608766",
+    "hash": "84fd2237b8568fd4896e2b98fc498738",
     "packages": [
+        {
+            "name": "net_bazzline/php_symfony_console_command",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/stevleibelt/php_symfony_console_command.git",
+                "reference": "0610b2d473b86716472299e7ab6b9ad5a12371e8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/stevleibelt/php_symfony_console_command/zipball/0610b2d473b86716472299e7ab6b9ad5a12371e8",
+                "reference": "0610b2d473b86716472299e7ab6b9ad5a12371e8",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "symfony/console": "2.2.*@dev"
+            },
+            "require-dev": {
+                "mikey179/vfsstream": "dev-master",
+                "mockery/mockery": "dev-master",
+                "phpunit/phpunit": "3.7.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Net\\Bazzline\\Symfony\\Console\\Command": "source/",
+                    "Test\\Net\\Bazzline\\Symfony\\Console\\Command": "test/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "stev leibelt",
+                    "email": "artodeto@arcor.de",
+                    "homepage": "http://artodeto.bazzline.net",
+                    "role": "Developer"
+                }
+            ],
+            "description": "symfony console command extension with features i want to have i a command class",
+            "homepage": "https://github.com/stevleibelt/php_symfony_console_command",
+            "keywords": [
+                "bazzline",
+                "command",
+                "console",
+                "php",
+                "symfony"
+            ],
+            "time": "2013-05-28 16:56:14"
+        },
         {
             "name": "symfony/console",
             "version": "2.2.x-dev",
@@ -549,6 +602,7 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "symfony/console": 20,
+        "net_bazzline/php_symfony_console_command": 20,
         "mikey179/vfsstream": 20,
         "mockery/mockery": 20
     },

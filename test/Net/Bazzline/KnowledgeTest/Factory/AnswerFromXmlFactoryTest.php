@@ -2,23 +2,23 @@
 
 namespace Test\Net\Bazzline\KnowledgeTest\Factory;
 
-use Net\Bazzline\KnowledgeTest\Factory\AnswerFromPhpArrayFactory;
+use Net\Bazzline\KnowledgeTest\Factory\AnswerFromXmlFactory;
 use Net\Bazzline\KnowledgeTest\ServiceLocator\ServiceLocator;
 use PHPUnit_Framework_TestCase;
 use stdClass;
 
 
-class AnswerFromPhpArrayFactoryTest extends PHPUnit_Framework_TestCase
+class AnswerFromXmlFactoryTest extends PHPUnit_Framework_TestCase
 {
     /**
-     * @var array
+     * @var string
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-05-28
      */
-    private $array;
+    private $xmlAsArray;
 
     /**
-     * @var \Net\Bazzline\KnowledgeTest\Factory\AnswerFromPhpArrayFactory
+     * @var \Net\Bazzline\KnowledgeTest\Factory\AnswerFromXmlFactory
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-05-28
      */
@@ -30,18 +30,20 @@ class AnswerFromPhpArrayFactoryTest extends PHPUnit_Framework_TestCase
      */
     public function setUp()
     {
-        $this->array = array(
-            'type' => 'SingleAnswer',
+        $this->xmlAsArray = array(
+            'type' => '<type>SingleAnswer</type>',
             'opportunities' => array(
-                'opportunity one',
-                'opportunity two',
-                'opportunity three'
+                '<opportunity>First Answer</opportunity>',
+                '<opportunity>Second Answer</opportunity>',
+                '<opportunity>Third Answer</opportunity>',
+                '<opportunity>Fourth Answer</opportunity>',
             ),
             'validOpportunities' => array(
-                'opportunity two'
+                '<validOpportunity>Second Answer</validOpportunity>'
             )
         );
-        $this->factory = new AnswerFromPhpArrayFactory();
+
+        $this->factory = new AnswerFromXmlFactory();
         $this->factory->setServiceLocator(new ServiceLocator());
     }
 
@@ -50,27 +52,26 @@ class AnswerFromPhpArrayFactoryTest extends PHPUnit_Framework_TestCase
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-05-28
      */
-    public static function dataProviderInvalidArray()
+    public static function dataProviderInvalidXml()
     {
         return array(
             array(null),
             array(1),
             array('one'),
-            array(new stdClass())
         );
     }
 
     /**
-     * @expectedException \Net\Bazzline\KnowledgeTest\Factory\FactoryInvalidArgumentException
-     * @expectedExceptionMessage Source has to be from type array
-     * @dataProvider dataProviderInvalidArray
+     * @expectedException \Exception
+     * @expectedExceptionMessage String could not be parsed as XML
+     * @dataProvider dataProviderInvalidXml
      *
      * @param mixed $source - the invalid source
      *
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-05-28
      */
-    public function testFromSourceWithNoArray($source)
+    public function stestFromSourceWithNoArray($source)
     {
         $this->factory->fromSource($source);
     }
@@ -84,8 +85,8 @@ class AnswerFromPhpArrayFactoryTest extends PHPUnit_Framework_TestCase
      */
     public function testFromSourceWithMissingType()
     {
-        unset($this->array['type']);
-        $this->factory->fromSource($this->array);
+        unset($this->xmlAsArray['type']);
+        $this->factory->fromSource(implode('', $this->xmlAsArray));
     }
 
     /**
@@ -97,8 +98,8 @@ class AnswerFromPhpArrayFactoryTest extends PHPUnit_Framework_TestCase
      */
     public function testFromSourceWithInvalidType()
     {
-        $this->array['type'] = 'Foo';
-        $this->factory->fromSource($this->array);
+        $this->xmlAsArray['type'] = 'Foo';
+        $this->factory->fromSource(implode('', $this->xmlAsArray));
     }
 
     /**
@@ -110,8 +111,8 @@ class AnswerFromPhpArrayFactoryTest extends PHPUnit_Framework_TestCase
      */
     public function testFromSourceWithMissingOpportunities()
     {
-        unset($this->array['opportunities']);
-        $this->factory->fromSource($this->array);
+        unset($this->xmlAsArray['opportunities']);
+        $this->factory->fromSource(implode('', $this->xmlAsArray));
     }
 
     /**
@@ -123,8 +124,8 @@ class AnswerFromPhpArrayFactoryTest extends PHPUnit_Framework_TestCase
      */
     public function testFromSourceWithMissingValidOpportunities()
     {
-        unset($this->array['validOpportunities']);
-        $this->factory->fromSource($this->array);
+        unset($this->xmlAsArray['validOpportunities']);
+        $this->factory->fromSource(implode('', $this->xmlAsArray));
     }
 
     /**
@@ -136,8 +137,8 @@ class AnswerFromPhpArrayFactoryTest extends PHPUnit_Framework_TestCase
      */
     public function testFromSourceWithEmptyOpportunities()
     {
-        $this->array['opportunities'] = array();
-        $this->factory->fromSource($this->array);
+        $this->xmlAsArray['opportunities'] = array();
+        $this->factory->fromSource(implode('', $this->xmlAsArray));
     }
 
     /**
@@ -149,56 +150,60 @@ class AnswerFromPhpArrayFactoryTest extends PHPUnit_Framework_TestCase
      */
     public function testFromSourceWithEmptyValidOpportunities()
     {
-        $this->array['validOpportunities'] = array();
-        $this->factory->fromSource($this->array);
+        $this->xmlAsArray['validOpportunities'] = array();
+        $this->factory->fromSource(implode('', $this->xmlAsArray));
     }
 
     /**
      * @expectedException \Net\Bazzline\KnowledgeTest\Factory\FactoryInvalidArgumentException
      * @expectedExceptionMessage No opportunities found in source array
-     * @dataProvider dataProviderInvalidArray
+     * @dataProvider dataProviderInvalidXml
      *
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-05-28
      */
     public function testFromSourceWithInvalidOpportunities($source)
     {
-        $this->array['opportunities'] = $source;
-        $this->factory->fromSource($this->array);
+        $this->xmlAsArray['opportunities'] = $source;
+        $this->factory->fromSource(implode('', $this->xmlAsArray));
     }
 
     /**
      * @expectedException \Net\Bazzline\KnowledgeTest\Factory\FactoryInvalidArgumentException
      * @expectedExceptionMessage No valid opportunities found in source array
-     * @dataProvider dataProviderInvalidArray
+     * @dataProvider dataProviderInvalidXml
      *
      * @author stev leibelt <artodeto@arcor.de>
      * @since 2013-05-28
      */
     public function testFromSourceWithInvalidValidOpportunities($source)
     {
-        $this->array['validOpportunities'] = $source;
-        $this->factory->fromSource($this->array);
+        $this->xmlAsArray['validOpportunities'] = $source;
+        $this->factory->fromSource(implode('', $this->xmlAsArray));
     }
 
     public function testFromSourceWithValidArray()
     {
-        $answer = $this->factory->fromSource($this->array);
+        $answer = $this->factory->fromSource(implode('', $this->xmlAsArray));
 
-        foreach ($this->array as $key => $value) {
-            $methodName = 'get' . ucfirst($key);
-
-            if (is_array($value)) {
-                $this->assertEquals(
-                    array_values($value),
-                    array_values($answer->$methodName())
-                );
-            } else {
-                $this->assertEquals(
-                    $value,
-                    $answer->$methodName()
-                );
-            }
-        }
+        $this->asserEquals(
+            'SingleAnswer',
+            $answer->getType()
+        );
+        $this->asserEquals(
+            array_values(array(
+                'First Answer',
+                'Second Answer',
+                'Third Answer',
+                'Fourth Answer'
+            )),
+            array_values($answer->getOpportunities())
+        );
+        $this->asserEquals(
+            array_values(array(
+                'Second Answer'
+            )),
+            array_values($answer->getValidOpportunities())
+        );
     }
 }
