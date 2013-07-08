@@ -4,7 +4,7 @@
     "description": "php framework for building knowledge test for cli and web application",
     "keywords": ["php", "bazzline", "framework", "knowledge test"],
     "homepage": "https://github.com/stevleibelt/php_framework_knowledge_test",
-    "license": "GPLv3",
+    "license": "LGPLv3",
     "authors": [
         {
             "name": "stev leibelt",
@@ -17,7 +17,8 @@
     "require": {
         "php": ">=5.3.3",
         "symfony/console": "2.2.*@dev",
-        "net_bazzline/php_symfony_console_command" : "dev-master"
+        "net_bazzline/php_symfony_console_command" : "dev-master",
+        "net_bazzline/php_component_testcase": "dev-master"
     },
     "require-dev": {
         "phpunit/phpunit": "3.7.*",

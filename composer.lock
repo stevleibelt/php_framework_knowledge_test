@@ -3,23 +3,130 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "84fd2237b8568fd4896e2b98fc498738",
+    "hash": "24fc102632d4d217e28fa9f8eb0eb27b",
     "packages": [
+        {
+            "name": "net_bazzline/php_component_converter",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/stevleibelt/php_net_bazzline_component_converter.git",
+                "reference": "f0a1be6f373660b810acea82bbf5a16195e12d1f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/stevleibelt/php_net_bazzline_component_converter/zipball/f0a1be6f373660b810acea82bbf5a16195e12d1f",
+                "reference": "f0a1be6f373660b810acea82bbf5a16195e12d1f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "symfony/yaml": "2.2.*@dev"
+            },
+            "require-dev": {
+                "mikey179/vfsstream": "dev-master",
+                "mockery/mockery": "dev-master",
+                "phpunit/phpunit": "3.7.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Net\\Bazzline\\Component\\Converter": "source/",
+                    "Test\\Net\\Bazzline\\Component\\Converter": "test/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPLv3"
+            ],
+            "authors": [
+                {
+                    "name": "stev leibelt",
+                    "email": "artodeto@arcor.de",
+                    "homepage": "http://artodeto.bazzline.net",
+                    "role": "Developer"
+                }
+            ],
+            "description": "php component that can handle converting of xml, php array, yaml",
+            "homepage": "https://github.com/stevleibelt/php_net_bazzline_component_convert",
+            "keywords": [
+                "converting",
+                "json",
+                "net_bazzline",
+                "php",
+                "php array",
+                "xml",
+                "yaml"
+            ],
+            "time": "2013-06-07 23:45:32"
+        },
+        {
+            "name": "net_bazzline/php_component_testcase",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/stevleibelt/php_component_testcase.git",
+                "reference": "d2c969edb6ec5741b94efc75ffec83a1bb1f5aa9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/stevleibelt/php_component_testcase/zipball/d2c969edb6ec5741b94efc75ffec83a1bb1f5aa9",
+                "reference": "d2c969edb6ec5741b94efc75ffec83a1bb1f5aa9",
+                "shasum": ""
+            },
+            "require": {
+                "net_bazzline/php_component_converter": "dev-master",
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "mockery/mockery": "dev-master",
+                "phpunit/phpunit": "3.7.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Net\\Bazzline\\Component\\TestCase": "source/",
+                    "Test\\Net\\Bazzline\\Component\\TestCase": "test/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPLv3"
+            ],
+            "authors": [
+                {
+                    "name": "stev leibelt",
+                    "email": "artodeto@arcor.de",
+                    "homepage": "http://artodeto.bazzline.net",
+                    "role": "Developer"
+                }
+            ],
+            "description": "php component generalize test case objects for knowledge tests",
+            "homepage": "https://github.com/stevleibelt/php_net_bazzline_component_testcase",
+            "keywords": [
+                "component",
+                "net_bazzline",
+                "php",
+                "testcase"
+            ],
+            "time": "2013-06-13 20:38:32"
+        },
         {
             "name": "net_bazzline/php_symfony_console_command",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/stevleibelt/php_symfony_console_command.git",
-                "reference": "0610b2d473b86716472299e7ab6b9ad5a12371e8"
+                "reference": "6d04cde4c453887209ad18f3d478c6633729a722"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/stevleibelt/php_symfony_console_command/zipball/0610b2d473b86716472299e7ab6b9ad5a12371e8",
-                "reference": "0610b2d473b86716472299e7ab6b9ad5a12371e8",
+                "url": "https://api.github.com/repos/stevleibelt/php_symfony_console_command/zipball/6d04cde4c453887209ad18f3d478c6633729a722",
+                "reference": "6d04cde4c453887209ad18f3d478c6633729a722",
                 "shasum": ""
             },
             "require": {
+                "net_bazzline/php_symfony_console_io": "dev-master",
                 "php": ">=5.3.3",
                 "symfony/console": "2.2.*@dev"
             },
@@ -56,7 +163,60 @@
                 "php",
                 "symfony"
             ],
-            "time": "2013-05-28 16:56:14"
+            "time": "2013-06-06 20:14:36"
+        },
+        {
+            "name": "net_bazzline/php_symfony_console_io",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/stevleibelt/php_symfony_console_io.git",
+                "reference": "d26705dce97d0f70ddb6a6ff3c184dae5248b386"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/stevleibelt/php_symfony_console_io/zipball/d26705dce97d0f70ddb6a6ff3c184dae5248b386",
+                "reference": "d26705dce97d0f70ddb6a6ff3c184dae5248b386",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "symfony/console": "2.2.*@dev"
+            },
+            "require-dev": {
+                "mikey179/vfsstream": "dev-master",
+                "mockery/mockery": "dev-master",
+                "phpunit/phpunit": "3.7.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Net\\Bazzline\\Symfony\\Console\\IO": "source/",
+                    "Test\\Net\\Bazzline\\Symfony\\Console\\IO": "test/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPLv3"
+            ],
+            "authors": [
+                {
+                    "name": "stev leibelt",
+                    "email": "artodeto@arcor.de",
+                    "homepage": "http://artodeto.bazzline.net",
+                    "role": "Developer"
+                }
+            ],
+            "description": "symfony console command io copied from composer",
+            "homepage": "https://github.com/stevleibelt/php_symfony_console_io",
+            "keywords": [
+                "bazzline",
+                "console",
+                "io",
+                "php",
+                "symfony"
+            ],
+            "time": "2013-06-06 22:10:15"
         },
         {
             "name": "symfony/console",
@@ -65,12 +225,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Console.git",
-                "reference": "602d610387a4f703aea12ec65a4d947e0ee7ce5f"
+                "reference": "76f6b389cee92e93b056d602e8ba5dd6526cea5a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Console/zipball/602d610387a4f703aea12ec65a4d947e0ee7ce5f",
-                "reference": "602d610387a4f703aea12ec65a4d947e0ee7ce5f",
+                "url": "https://api.github.com/repos/symfony/Console/zipball/76f6b389cee92e93b056d602e8ba5dd6526cea5a",
+                "reference": "76f6b389cee92e93b056d602e8ba5dd6526cea5a",
                 "shasum": ""
             },
             "require": {
@@ -103,7 +263,54 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "http://symfony.com",
-            "time": "2013-05-27 14:47:40"
+            "time": "2013-06-13 07:47:06"
+        },
+        {
+            "name": "symfony/yaml",
+            "version": "2.2.x-dev",
+            "target-dir": "Symfony/Component/Yaml",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/Yaml.git",
+                "reference": "v2.2.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/Yaml/zipball/v2.2.2",
+                "reference": "v2.2.2",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.2-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Component\\Yaml\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Yaml Component",
+            "homepage": "http://symfony.com",
+            "time": "2013-05-10 18:08:31"
         }
     ],
     "packages-dev": [
@@ -113,18 +320,23 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mikey179/vfsStream.git",
-                "reference": "v1.2.0"
+                "reference": "bfe5bcf59eb50b5029546d080c23146f7528024f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mikey179/vfsStream/zipball/v1.2.0",
-                "reference": "v1.2.0",
+                "url": "https://api.github.com/repos/mikey179/vfsStream/zipball/bfe5bcf59eb50b5029546d080c23146f7528024f",
+                "reference": "bfe5bcf59eb50b5029546d080c23146f7528024f",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.0"
             },
             "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.3.x-dev"
+                }
+            },
             "autoload": {
                 "psr-0": {
                     "org\\bovigo\\vfs\\": "src/main/php"
@@ -135,7 +347,7 @@
                 "BSD"
             ],
             "homepage": "http://vfs.bovigo.org/",
-            "time": "2013-04-01 10:41:02"
+            "time": "2013-05-28 21:32:26"
         },
         {
             "name": "mockery/mockery",
@@ -143,12 +355,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/padraic/mockery.git",
-                "reference": "422e6dc81ef12e4714248a06bca6dd382f3b38dd"
+                "reference": "70739803f85065cc2ec00fae662bdcaaa4df487e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/padraic/mockery/zipball/422e6dc81ef12e4714248a06bca6dd382f3b38dd",
-                "reference": "422e6dc81ef12e4714248a06bca6dd382f3b38dd",
+                "url": "https://api.github.com/repos/padraic/mockery/zipball/70739803f85065cc2ec00fae662bdcaaa4df487e",
+                "reference": "70739803f85065cc2ec00fae662bdcaaa4df487e",
                 "shasum": ""
             },
             "require": {
@@ -189,7 +401,7 @@
                 "test double",
                 "testing"
             ],
-            "time": "2013-05-13 12:56:51"
+            "time": "2013-05-29 09:13:17"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -197,12 +409,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
-                "reference": "1.2.11"
+                "reference": "8d0a47217af4a0ed74ac0e155ec2007205d1408f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/1.2.11",
-                "reference": "1.2.11",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/8d0a47217af4a0ed74ac0e155ec2007205d1408f",
+                "reference": "8d0a47217af4a0ed74ac0e155ec2007205d1408f",
                 "shasum": ""
             },
             "require": {
@@ -245,7 +457,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2013-05-23 18:23:24"
+            "time": "2013-06-12 07:14:37"
         },
         {
             "name": "phpunit/php-file-iterator",
@@ -431,12 +643,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "3.7.21"
+                "reference": "268d9f12f6b7e982ad7bb40ea492085a3d1414d6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/3.7.21",
-                "reference": "3.7.21",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/268d9f12f6b7e982ad7bb40ea492085a3d1414d6",
+                "reference": "268d9f12f6b7e982ad7bb40ea492085a3d1414d6",
                 "shasum": ""
             },
             "require": {
@@ -497,7 +709,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2013-05-23 18:54:29"
+            "time": "2013-06-01 10:06:56"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
@@ -547,53 +759,6 @@
                 "xunit"
             ],
             "time": "2013-05-07 12:11:45"
-        },
-        {
-            "name": "symfony/yaml",
-            "version": "dev-master",
-            "target-dir": "Symfony/Component/Yaml",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/Yaml.git",
-                "reference": "82100c7732c95452702d11433aad50988700d36c"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Yaml/zipball/82100c7732c95452702d11433aad50988700d36c",
-                "reference": "82100c7732c95452702d11433aad50988700d36c",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.3"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.4-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Symfony\\Component\\Yaml\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "http://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony Yaml Component",
-            "homepage": "http://symfony.com",
-            "time": "2013-05-16 07:54:39"
         }
     ],
     "aliases": [
@@ -603,6 +768,7 @@
     "stability-flags": {
         "symfony/console": 20,
         "net_bazzline/php_symfony_console_command": 20,
+        "net_bazzline/php_component_testcase": 20,
         "mikey179/vfsstream": 20,
         "mockery/mockery": 20
     },

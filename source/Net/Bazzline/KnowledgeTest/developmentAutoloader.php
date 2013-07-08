@@ -8,9 +8,9 @@ function netBazzlineKnowledgeTestBasicAutoloader($classname)
 {
     $namespace = 'Net\\Bazzline\\KnowledgeTest\\';
     //$lengthOfNamespace = strlen($namespace);
-    //$lengthOfNamespace = 28;
+    //$lengthOfNamespace = 27;
     //$expectedNamespace = substr($classname, 0, $lengthOfNamespace);
-    $expectedNamespace = substr($classname, 0, 28);
+    $expectedNamespace = substr($classname, 0, 27);
 
     $isSupportedClassnameByNamespace = ($namespace == $expectedNamespace);
 
