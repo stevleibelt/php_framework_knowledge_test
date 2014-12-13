@@ -1,6 +1,6 @@
 <?php
 /**
- * @author stev leibelt <artodeto@arcor.de>
+ * @author stev leibelt <artodeto@bazzline.net>
  * @since 2013-05-26
  */
 namespace Net\Bazzline\KnowledgeTest\TestCase;
@@ -9,21 +9,21 @@ namespace Net\Bazzline\KnowledgeTest\TestCase;
  * Class Question
  *
  * @package Net\Bazzline\TestCase\Answer
- * @author stev leibelt <artodeto@arcor.de>
+ * @author stev leibelt <artodeto@bazzline.net>
  * @since 2013-05-26
  */
 class Question implements QuestionInterface
 {
     /**
      * @var string
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-26
      */
     private $hint;
 
     /**
      * @var string
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-26
      */
     private $problemDefinition;

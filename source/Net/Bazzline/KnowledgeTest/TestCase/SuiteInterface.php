@@ -1,6 +1,6 @@
 <?php
 /**
- * @author stev leibelt <artodeto@arcor.de>
+ * @author stev leibelt <artodeto@bazzline.net>
  * @since 2013-05-26
  */
 namespace Net\Bazzline\KnowledgeTest\TestCase;
@@ -9,7 +9,7 @@ namespace Net\Bazzline\KnowledgeTest\TestCase;
  * Class SuiteInterface
  *
  * @package Net\Bazzline\KnowledgeTest\TestCase
- * @author stev leibelt <artodeto@arcor.de>
+ * @author stev leibelt <artodeto@bazzline.net>
  * @since 2013-05-26
  */
 interface SuiteInterface
@@ -18,7 +18,7 @@ interface SuiteInterface
      * Getter for name
      *
      * @return null|string
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-26
      */
     public function getName();
@@ -29,7 +29,7 @@ interface SuiteInterface
      * @param string $name - name of the suite
      * @return SuiteInterface
      * @throws InvalidArgumentException
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-26
      */
     public function setName($name);
@@ -38,7 +38,7 @@ interface SuiteInterface
      * Getter for description
      *
      * @return null|string
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-26
      */
     public function getDescription();
@@ -50,7 +50,7 @@ interface SuiteInterface
      *
      * @return SuiteInterface
      * @throws InvalidArgumentException
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-26
      */
     public function setDescription($description);
@@ -59,7 +59,7 @@ interface SuiteInterface
      * Getter for language
      *
      * @return null|string
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-26
      */
     public function getLanguage();
@@ -71,7 +71,7 @@ interface SuiteInterface
      *
      * @return SuiteInterface
      * @throws InvalidArgumentException
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-26
      */
     public function setLanguage($language);
@@ -80,7 +80,7 @@ interface SuiteInterface
      * Getter for test cases
      *
      * @return array
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-26
      */
     public function getTestCases();
@@ -91,7 +91,7 @@ interface SuiteInterface
      * @param TestCaseInterface $testCase - a test case
      *
      * @return SuiteInterface
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-26
      */
     public function addTestCase(TestCaseInterface $testCase);

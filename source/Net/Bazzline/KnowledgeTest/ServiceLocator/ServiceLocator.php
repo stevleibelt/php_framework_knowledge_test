@@ -1,6 +1,6 @@
 <?php
 /**
- * @author stev leibelt <artodeto@arcor.de>
+ * @author stev leibelt <artodeto@bazzline.net>
  * @since 2013-05-26 
  */
 namespace Net\Bazzline\KnowledgeTest\ServiceLocator;
@@ -12,20 +12,20 @@ use InvalidArgumentException;
  * Class ServiceLocator
  *
  * @package Net\Bazzline\KnowledgeTest\ServiceLocator
- * @author stev leibelt <artodeto@arcor.de>
+ * @author stev leibelt <artodeto@bazzline.net>
  * @since 2013-05-26
  */
 class ServiceLocator
 {
     /**
      * @var array
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-26
      */
     private $instancePool;
 
     /**
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-26
      */
     public function __construct()
@@ -35,7 +35,7 @@ class ServiceLocator
 
     /**
      * @return \Net\Bazzline\KnowledgeTest\Factory\AnswerFromPhpArrayFactory
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-26
      */
     public function getAnswerFromPhpArrayFactory()
@@ -46,7 +46,7 @@ class ServiceLocator
 
     /**
      * @return \Net\Bazzline\KnowledgeTest\Factory\AnswerFromXmlFactory
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-26
      */
     public function getAnswerFromXmlFactory()
@@ -57,7 +57,7 @@ class ServiceLocator
 
     /**
      * @return \Net\Bazzline\KnowledgeTest\Factory\QuestionFromPhpArrayFactory
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-26
      */
     public function getQuestionFromPhpArrayFactory()
@@ -68,7 +68,7 @@ class ServiceLocator
 
     /**
      * @return \Net\Bazzline\KnowledgeTest\Factory\QuestionFromXmlFactory
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-26
      */
     public function getQuestionFromXmlFactory()
@@ -78,7 +78,7 @@ class ServiceLocator
 
     /**
      * @return \Net\Bazzline\KnowledgeTest\Factory\SuiteFactory
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-26
      */
     public function getSuiteFactory()
@@ -89,7 +89,7 @@ class ServiceLocator
 
     /**
      * @return \Net\Bazzline\KnowledgeTest\Factory\TestCaseFactory
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-26
      */
     public function getTestCaseFactory()
@@ -99,7 +99,7 @@ class ServiceLocator
 
     /**
      * @return \Net\Bazzline\KnowledgeTest\Factory\TestCaseFromXmlFactory
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-26
      */
     public function getTestCaseFromXmlFactory()
@@ -109,7 +109,7 @@ class ServiceLocator
 
     /**
      * @return \Net\Bazzline\KnowledgeTest\Factory\TestCaseFromPhpArrayFactory
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-26
      */
     public function getTestCaseFromPhpArrayFactory()
@@ -119,7 +119,7 @@ class ServiceLocator
 
     /**
      * @return \Net\Bazzline\KnowledgeTest\Factory\SuiteFromPhpArrayFactory
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-26
      */
     public function getSuiteFromPhpArrayFactory()
@@ -129,7 +129,7 @@ class ServiceLocator
 
     /**
      * @return \Net\Bazzline\KnowledgeTest\Factory\SuiteFromXmlFactory
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-26
      */
     public function getSuiteFromXmlFactory()
@@ -139,7 +139,7 @@ class ServiceLocator
 
     /**
      * @return \Net\Bazzline\KnowledgeTest\TestCase\Suite
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-26
      */
     public function getNewSuite()
@@ -149,7 +149,7 @@ class ServiceLocator
 
     /**
      * @return \Net\Bazzline\KnowledgeTest\TestCase\TestCase
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-26
      */
     public function getNewTestCase()
@@ -159,7 +159,7 @@ class ServiceLocator
 
     /**
      * @return \Net\Bazzline\KnowledgeTest\TestCase\Question
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-26
      */
     public function getNewQuestion()
@@ -169,7 +169,7 @@ class ServiceLocator
 
     /**
      * @return \Net\Bazzline\KnowledgeTest\TestCase\SingleAnswer
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-26
      */
     public function getNewSingleAnswer()
@@ -179,7 +179,7 @@ class ServiceLocator
 
     /**
      * @return \Net\Bazzline\KnowledgeTest\TestCase\MultipleAnswer
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-26
      */
     public function getNewMultipleAnswer()
@@ -189,7 +189,7 @@ class ServiceLocator
 
     /**
      * @return \Net\Bazzline\KnowledgeTest\TestCase\FreeTextAnswer
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-26
      */
     public function getNewFreeTextAnswer()
@@ -199,7 +199,7 @@ class ServiceLocator
 
     /**
      * @return \Net\Bazzline\KnowledgeTest\Command\TestCommand
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-26
      */
     public function getNewTestCommand()
@@ -213,7 +213,7 @@ class ServiceLocator
     /**
      * @param $path
      * @return DirectoryIterator
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-26
      */
     public function getDirectoryIterator($path)
@@ -224,7 +224,7 @@ class ServiceLocator
     /**
      * @param $path
      * @return \Net\Bazzline\KnowledgeTest\Filesystem\SuiteFilterDirectoryIterator
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-26
      */
     public function getNewSuiteFilterDirectoryIterator($path)
@@ -235,7 +235,7 @@ class ServiceLocator
     /**
      * @param $path
      * @return \Net\Bazzline\KnowledgeTest\Filesystem\TestCaseFilterDirectoryIterator
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-26
      */
     public function getNewTestCaseFilterDirectoryIterator($path)
@@ -248,7 +248,7 @@ class ServiceLocator
      *
      * @return object
      * @throws \InvalidArgumentException
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-26
      */
     private function getFromInstancePoolOrCreate($className)

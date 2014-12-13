@@ -1,6 +1,6 @@
 <?php
 /**
- * @author stev leibelt <artodeto@arcor.de>
+ * @author stev leibelt <artodeto@bazzline.net>
  * @since 2013-05-26 
  */
 namespace Net\Bazzline\KnowledgeTest\Command;
@@ -14,14 +14,14 @@ use Symfony\Component\Console\Output\OutputInterface;
  * Class TestCommand
  *
  * @package Net\Bazzline\KnowledgeTest\Command
- * @author stev leibelt <artodeto@arcor.de>
+ * @author stev leibelt <artodeto@bazzline.net>
  * @since 2013-05-26
  */
 class TestCommand extends CommandAbstract
 {
     /**
      * @var array
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-26
      */
     private $pathsToSuites;
@@ -30,7 +30,7 @@ class TestCommand extends CommandAbstract
      * @param InputInterface $input
      * @param OutputInterface $output
      * @return int|null|void
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-26
      */
     public function execute(InputInterface $input, OutputInterface $output)
@@ -51,7 +51,7 @@ class TestCommand extends CommandAbstract
     }
 
     /**
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-26
      */
     protected  function configure()
@@ -80,7 +80,7 @@ class TestCommand extends CommandAbstract
      * @param OutputInterface $output
      *
      * @return OutputInterface
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-26
      */
     private function setupPathsToSuites(InputInterface $input, OutputInterface $output)

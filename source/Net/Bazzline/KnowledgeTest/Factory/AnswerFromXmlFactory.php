@@ -1,6 +1,6 @@
 <?php
 /**
- * @author stev leibelt <artodeto@arcor.de>
+ * @author stev leibelt <artodeto@bazzline.net>
  * @since 2013-05-26
  */
 namespace Net\Bazzline\KnowledgeTest\Factory;
@@ -14,7 +14,7 @@ use SimpleXMLElement;
  * Class AnswerFromXmlFactory
  *
  * @package Net\Bazzline\KnowledgeTest\Factory
- * @author stev leibelt <artodeto@arcor.de>
+ * @author stev leibelt <artodeto@bazzline.net>
  * @since 2013-05-26
  */
 class AnswerFromXmlFactory extends FactoryAbstract implements FactoryFromSourceInterface
@@ -48,7 +48,7 @@ class AnswerFromXmlFactory extends FactoryAbstract implements FactoryFromSourceI
      *
      * @return \Net\Bazzline\KnowledgeTest\TestCase\AnswerInterface
      * @throws FactoryInvalidArgumentException
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-26
      */
     public function fromSource($source)

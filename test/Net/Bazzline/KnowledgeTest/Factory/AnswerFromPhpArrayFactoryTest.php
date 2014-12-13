@@ -12,20 +12,20 @@ class AnswerFromPhpArrayFactoryTest extends PHPUnit_Framework_TestCase
 {
     /**
      * @var array
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-28
      */
     private $array;
 
     /**
      * @var \Net\Bazzline\KnowledgeTest\Factory\AnswerFromPhpArrayFactory
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-28
      */
     private $factory;
 
     /**
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-28
      */
     public function setUp()
@@ -47,7 +47,7 @@ class AnswerFromPhpArrayFactoryTest extends PHPUnit_Framework_TestCase
 
     /**
      * @return array
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-28
      */
     public static function dataProviderInvalidArray()
@@ -67,7 +67,7 @@ class AnswerFromPhpArrayFactoryTest extends PHPUnit_Framework_TestCase
      *
      * @param mixed $source - the invalid source
      *
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-28
      */
     public function testFromSourceWithNoArray($source)
@@ -79,7 +79,7 @@ class AnswerFromPhpArrayFactoryTest extends PHPUnit_Framework_TestCase
      * @expectedException \Net\Bazzline\KnowledgeTest\Factory\FactoryInvalidArgumentException
      * @expectedExceptionMessage No type found in source array
      *
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-28
      */
     public function testFromSourceWithMissingType()
@@ -92,7 +92,7 @@ class AnswerFromPhpArrayFactoryTest extends PHPUnit_Framework_TestCase
      * @expectedException \Net\Bazzline\KnowledgeTest\Factory\FactoryInvalidArgumentException
      * @expectedExceptionMessage Not supported type found in source array
      *
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-28
      */
     public function testFromSourceWithInvalidType()
@@ -105,7 +105,7 @@ class AnswerFromPhpArrayFactoryTest extends PHPUnit_Framework_TestCase
      * @expectedException \Net\Bazzline\KnowledgeTest\Factory\FactoryInvalidArgumentException
      * @expectedExceptionMessage No opportunities found in source array
      *
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-28
      */
     public function testFromSourceWithMissingOpportunities()
@@ -118,7 +118,7 @@ class AnswerFromPhpArrayFactoryTest extends PHPUnit_Framework_TestCase
      * @expectedException \Net\Bazzline\KnowledgeTest\Factory\FactoryInvalidArgumentException
      * @expectedExceptionMessage No valid opportunities found in source array
      *
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-28
      */
     public function testFromSourceWithMissingValidOpportunities()
@@ -131,7 +131,7 @@ class AnswerFromPhpArrayFactoryTest extends PHPUnit_Framework_TestCase
      * @expectedException \Net\Bazzline\KnowledgeTest\Factory\FactoryInvalidArgumentException
      * @expectedExceptionMessage No opportunities found in source array
      *
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-28
      */
     public function testFromSourceWithEmptyOpportunities()
@@ -144,7 +144,7 @@ class AnswerFromPhpArrayFactoryTest extends PHPUnit_Framework_TestCase
      * @expectedException \Net\Bazzline\KnowledgeTest\Factory\FactoryInvalidArgumentException
      * @expectedExceptionMessage No valid opportunities found in source array
      *
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-28
      */
     public function testFromSourceWithEmptyValidOpportunities()
@@ -158,7 +158,7 @@ class AnswerFromPhpArrayFactoryTest extends PHPUnit_Framework_TestCase
      * @expectedExceptionMessage No opportunities found in source array
      * @dataProvider dataProviderInvalidArray
      *
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-28
      */
     public function testFromSourceWithInvalidOpportunities($source)
@@ -172,7 +172,7 @@ class AnswerFromPhpArrayFactoryTest extends PHPUnit_Framework_TestCase
      * @expectedExceptionMessage No valid opportunities found in source array
      * @dataProvider dataProviderInvalidArray
      *
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-28
      */
     public function testFromSourceWithInvalidValidOpportunities($source)

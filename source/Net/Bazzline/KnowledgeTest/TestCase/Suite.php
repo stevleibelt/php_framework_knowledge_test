@@ -1,6 +1,6 @@
 <?php
 /**
- * @author stev leibelt <artodeto@arcor.de>
+ * @author stev leibelt <artodeto@bazzline.net>
  * @since 2013-05-26
  */
 namespace Net\Bazzline\KnowledgeTest\TestCase;
@@ -9,41 +9,41 @@ namespace Net\Bazzline\KnowledgeTest\TestCase;
  * Class Suite
  *
  * @package Net\Bazzline\KnowledgeTest\TestCase
- * @author stev leibelt <artodeto@arcor.de>
+ * @author stev leibelt <artodeto@bazzline.net>
  * @since 2013-05-26
  */
 class Suite implements SuiteInterface
 {
     /**
      * @var string
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-26
      */
     private $description;
 
     /**
      * @var string
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-26
      */
     private $language;
 
     /**
      * @var string
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-26
      */
     private $name;
 
     /**
      * @var array
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-26
      */
     private $testCases;
 
     /**
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-26
      */
     public function __construct()
@@ -58,7 +58,7 @@ class Suite implements SuiteInterface
      * Getter for name
      *
      * @return null|string
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-26
      */
     public function getName()
@@ -72,7 +72,7 @@ class Suite implements SuiteInterface
      * @param string $name - name of the suite
      * @return SuiteInterface
      * @throws InvalidArgumentException
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-26
      */
     public function setName($name)
@@ -86,7 +86,7 @@ class Suite implements SuiteInterface
      * Getter for description
      *
      * @return null|string
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-26
      */
     public function getDescription()
@@ -101,7 +101,7 @@ class Suite implements SuiteInterface
      *
      * @return SuiteInterface
      * @throws InvalidArgumentException
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-26
      */
     public function setDescription($description)
@@ -115,7 +115,7 @@ class Suite implements SuiteInterface
      * Getter for language
      *
      * @return null|string
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-26
      */
     public function getLanguage()
@@ -130,7 +130,7 @@ class Suite implements SuiteInterface
      *
      * @return SuiteInterface
      * @throws InvalidArgumentException
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-26
      */
     public function setLanguage($language)
@@ -144,7 +144,7 @@ class Suite implements SuiteInterface
      * Getter for test cases
      *
      * @return array
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-26
      */
     public function getTestCases()
@@ -158,7 +158,7 @@ class Suite implements SuiteInterface
      * @param TestCaseInterface $testCase - a test case
      *
      * @return SuiteInterface
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-26
      */
     public function addTestCase(TestCaseInterface $testCase)

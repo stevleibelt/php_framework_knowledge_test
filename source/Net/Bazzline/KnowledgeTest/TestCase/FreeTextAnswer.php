@@ -1,6 +1,6 @@
 <?php
 /**
- * @author stev leibelt <artodeto@arcor.de>
+ * @author stev leibelt <artodeto@bazzline.net>
  * @since 2013-05-26
  */
 namespace Net\Bazzline\KnowledgeTest\TestCase;
@@ -9,7 +9,7 @@ namespace Net\Bazzline\KnowledgeTest\TestCase;
  * Class FreeTextAnswer
  *
  * @package Net\Bazzline\TestCase\Answer
- * @author stev leibelt <artodeto@arcor.de>
+ * @author stev leibelt <artodeto@bazzline.net>
  * @since 2013-05-26
  */
 class FreeTextAnswer extends AnswerAbstract
@@ -18,7 +18,7 @@ class FreeTextAnswer extends AnswerAbstract
      * Validates given opportunity.
      *
      * @return boolean
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-25
      */
     public function validateSelectedOpportunities()
@@ -45,7 +45,7 @@ class FreeTextAnswer extends AnswerAbstract
      * Returns the percentage (0 up to 100) of accuracy.
      *
      * @return integer
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-25
      */
     public function getPercentageOfAccuracy()

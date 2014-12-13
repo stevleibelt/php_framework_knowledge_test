@@ -12,20 +12,20 @@ class AnswerFromXmlFactoryTest extends PHPUnit_Framework_TestCase
 {
     /**
      * @var string
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-28
      */
     private $xmlAsArray;
 
     /**
      * @var \Net\Bazzline\KnowledgeTest\Factory\AnswerFromXmlFactory
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-28
      */
     private $factory;
 
     /**
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-28
      */
     public function setUp()
@@ -49,7 +49,7 @@ class AnswerFromXmlFactoryTest extends PHPUnit_Framework_TestCase
 
     /**
      * @return array
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-28
      */
     public static function dataProviderInvalidXml()
@@ -68,7 +68,7 @@ class AnswerFromXmlFactoryTest extends PHPUnit_Framework_TestCase
      *
      * @param mixed $source - the invalid source
      *
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-28
      */
     public function stestFromSourceWithNoArray($source)
@@ -80,7 +80,7 @@ class AnswerFromXmlFactoryTest extends PHPUnit_Framework_TestCase
      * @expectedException \Net\Bazzline\KnowledgeTest\Factory\FactoryInvalidArgumentException
      * @expectedExceptionMessage No type found in source array
      *
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-28
      */
     public function testFromSourceWithMissingType()
@@ -93,7 +93,7 @@ class AnswerFromXmlFactoryTest extends PHPUnit_Framework_TestCase
      * @expectedException \Net\Bazzline\KnowledgeTest\Factory\FactoryInvalidArgumentException
      * @expectedExceptionMessage Not supported type found in source array
      *
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-28
      */
     public function testFromSourceWithInvalidType()
@@ -106,7 +106,7 @@ class AnswerFromXmlFactoryTest extends PHPUnit_Framework_TestCase
      * @expectedException \Net\Bazzline\KnowledgeTest\Factory\FactoryInvalidArgumentException
      * @expectedExceptionMessage No opportunities found in source array
      *
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-28
      */
     public function testFromSourceWithMissingOpportunities()
@@ -119,7 +119,7 @@ class AnswerFromXmlFactoryTest extends PHPUnit_Framework_TestCase
      * @expectedException \Net\Bazzline\KnowledgeTest\Factory\FactoryInvalidArgumentException
      * @expectedExceptionMessage No valid opportunities found in source array
      *
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-28
      */
     public function testFromSourceWithMissingValidOpportunities()
@@ -132,7 +132,7 @@ class AnswerFromXmlFactoryTest extends PHPUnit_Framework_TestCase
      * @expectedException \Net\Bazzline\KnowledgeTest\Factory\FactoryInvalidArgumentException
      * @expectedExceptionMessage No opportunities found in source array
      *
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-28
      */
     public function testFromSourceWithEmptyOpportunities()
@@ -145,7 +145,7 @@ class AnswerFromXmlFactoryTest extends PHPUnit_Framework_TestCase
      * @expectedException \Net\Bazzline\KnowledgeTest\Factory\FactoryInvalidArgumentException
      * @expectedExceptionMessage No valid opportunities found in source array
      *
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-28
      */
     public function testFromSourceWithEmptyValidOpportunities()
@@ -159,7 +159,7 @@ class AnswerFromXmlFactoryTest extends PHPUnit_Framework_TestCase
      * @expectedExceptionMessage No opportunities found in source array
      * @dataProvider dataProviderInvalidXml
      *
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-28
      */
     public function testFromSourceWithInvalidOpportunities($source)
@@ -173,7 +173,7 @@ class AnswerFromXmlFactoryTest extends PHPUnit_Framework_TestCase
      * @expectedExceptionMessage No valid opportunities found in source array
      * @dataProvider dataProviderInvalidXml
      *
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-28
      */
     public function testFromSourceWithInvalidValidOpportunities($source)

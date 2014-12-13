@@ -1,6 +1,6 @@
 <?php
 /**
- * @author stev leibelt <artodeto@arcor.de>
+ * @author stev leibelt <artodeto@bazzline.net>
  * @since 2013-05-26 
  */
 namespace Net\Bazzline\KnowledgeTest\Command;
@@ -14,14 +14,14 @@ use Symfony\Component\Console\Output\OutputInterface;
  * Class CommandAbstract
  *
  * @package Net\Bazzline\KnowledgeTest\Command
- * @author stev leibelt <artodeto@arcor.de>
+ * @author stev leibelt <artodeto@bazzline.net>
  * @since 2013-05-26
  */
 abstract class CommandAbstract extends Command implements ServiceLocatorAwareInterface
 {
     /**
      * @var ServiceLocator
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-26
      */
     protected  $serviceLocator;
@@ -30,7 +30,7 @@ abstract class CommandAbstract extends Command implements ServiceLocatorAwareInt
      * Getter for service locator
      *
      * @return ServiceLocator
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-26
      */
     public function getServiceLocator()
@@ -44,7 +44,7 @@ abstract class CommandAbstract extends Command implements ServiceLocatorAwareInt
      * @param ServiceLocator $serviceLocator - the service locator
      *
      * @return CommandAbstract
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-26
      */
     public function setServiceLocator(ServiceLocator $serviceLocator)

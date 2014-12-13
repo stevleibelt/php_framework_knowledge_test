@@ -1,6 +1,6 @@
 <?php
 /**
- * @author stev leibelt <artodeto@arcor.de>
+ * @author stev leibelt <artodeto@bazzline.net>
  * @since 2013-05-26 
  */
 namespace Net\Bazzline\KnowledgeTest\Factory;
@@ -11,20 +11,20 @@ namespace Net\Bazzline\KnowledgeTest\Factory;
  * Currently supported are xml and php file extension.
  *
  * @package Net\Bazzline\KnowledgeTest\Factory
- * @author stev leibelt <artodeto@arcor.de>
+ * @author stev leibelt <artodeto@bazzline.net>
  * @since 2013-05-26
  */
 class TestCaseFactory extends FactoryAbstract
 {
     /**
      * @var array
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-26
      */
     private $instancePool;
 
     /**
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-26
      */
     public function __construct()
@@ -37,7 +37,7 @@ class TestCaseFactory extends FactoryAbstract
      *
      * @return TestCaseFromPhpArrayFactory|TestCaseFromXmlFactory
      * @throws FactoryInvalidArgumentException
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-26
      */
     public function getFactoryByFilename($filename)

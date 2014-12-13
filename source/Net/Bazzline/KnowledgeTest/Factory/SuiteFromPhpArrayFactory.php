@@ -1,6 +1,6 @@
 <?php
 /**
- * @author stev leibelt <artodeto@arcor.de>
+ * @author stev leibelt <artodeto@bazzline.net>
  * @since 2013-05-26
  */
 namespace Net\Bazzline\KnowledgeTest\Factory;
@@ -9,7 +9,7 @@ namespace Net\Bazzline\KnowledgeTest\Factory;
  * Class SuiteFromPhpArrayFactory
  *
  * @package Net\Bazzline\KnowledgeTest\Factory
- * @author stev leibelt <artodeto@arcor.de>
+ * @author stev leibelt <artodeto@bazzline.net>
  * @since 2013-05-26
  */
 class SuiteFromPhpArrayFactory extends FactoryAbstract implements FactoryFromSourceInterface
@@ -31,7 +31,7 @@ class SuiteFromPhpArrayFactory extends FactoryAbstract implements FactoryFromSou
      *
      * @return \Net\Bazzline\KnowledgeTest\TestCase\SuiteInterface
      * @throws FactoryInvalidArgumentException
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-26
      */
     public function fromSource($filename)

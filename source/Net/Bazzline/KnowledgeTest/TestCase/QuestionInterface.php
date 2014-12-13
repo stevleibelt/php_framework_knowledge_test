@@ -1,6 +1,6 @@
 <?php
 /**
- * @author stev leibelt <artodeto@arcor.de>
+ * @author stev leibelt <artodeto@bazzline.net>
  * @since 2013-05-25
  */
 namespace Net\Bazzline\KnowledgeTest\TestCase;
@@ -9,7 +9,7 @@ namespace Net\Bazzline\KnowledgeTest\TestCase;
  * Class QuestionInterface
  *
  * @package Net\Bazzline\TestCase\Answer
- * @author stev leibelt <artodeto@arcor.de>
+ * @author stev leibelt <artodeto@bazzline.net>
  * @since 2013-05-25
  */
 interface QuestionInterface
@@ -18,7 +18,7 @@ interface QuestionInterface
      * Returns a hint to the solution
      *
      * @return string
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-25
      */
     public function getHint();
@@ -27,7 +27,7 @@ interface QuestionInterface
      * Returns the current problem
      *
      * @return mixed
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-25
      */
     public function getProblemDefinition();
@@ -36,7 +36,7 @@ interface QuestionInterface
      * Method to check if a hind is available
      *
      * @return boolean
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-26
      */
     public function isHintAvailable();
@@ -48,7 +48,7 @@ interface QuestionInterface
      *
      * @return QuestionInterface
      * @throws InvalidArgumentException
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-26
      */
     public function setHint($hint);
@@ -60,7 +60,7 @@ interface QuestionInterface
      *
      * @return QuestionInterface
      * @throws InvalidArgumentException
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-26
      */
     public function setProblemDefinition($problemDefinition);

@@ -12,7 +12,7 @@ use Net\Bazzline\TestCase\Question;
  * Class TestCaseInterface
  *
  * @package Net\Bazzline\TestCase
- * @author stev leibelt <artodeto@arcor.de>
+ * @author stev leibelt <artodeto@bazzline.net>
  * @since 2013-05-25
  */
 interface TestCaseInterface
@@ -22,7 +22,7 @@ interface TestCaseInterface
      *
      * @return AnswerInterface
      * @throws RuntimeException
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-25
      */
     public function getAnswer();
@@ -33,7 +33,7 @@ interface TestCaseInterface
      * @param AnswerInterface $answer - answer object
      *
      * @return TestCaseInterface
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-25
      */
     public function setAnswer(AnswerInterface $answer);
@@ -43,7 +43,7 @@ interface TestCaseInterface
      *
      * @return QuestionInterface
      * @throws RuntimeException
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-25
      */
     public function getQuestion();
@@ -54,7 +54,7 @@ interface TestCaseInterface
      * @param QuestionInterface $question - question object
      *
      * @return TestCaseInterface
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-25
      */
     public function setQuestion(QuestionInterface $question);

@@ -1,6 +1,6 @@
 <?php
 /**
- * @author stev leibelt <artodeto@arcor.de>
+ * @author stev leibelt <artodeto@bazzline.net>
  * @since 2013-05-26 
  */
 
@@ -13,14 +13,14 @@ use Net\Bazzline\KnowledgeTest\ServiceLocator\ServiceLocatorAwareInterface;
  * Class FactoryAbstract
  *
  * @package Net\Bazzline\KnowledgeTest\Factory
- * @author stev leibelt <artodeto@arcor.de>
+ * @author stev leibelt <artodeto@bazzline.net>
  * @since 2013-05-26
  */
 abstract class FactoryAbstract implements ServiceLocatorAwareInterface
 {
     /**
      * @var ServiceLocator
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-26
      */
     protected  $serviceLocator;
@@ -29,7 +29,7 @@ abstract class FactoryAbstract implements ServiceLocatorAwareInterface
      * Getter for service locator
      *
      * @return ServiceLocator
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-26
      */
     public function getServiceLocator()
@@ -43,7 +43,7 @@ abstract class FactoryAbstract implements ServiceLocatorAwareInterface
      * @param ServiceLocator $serviceLocator - the service locator
      *
      * @return FactoryAbstract
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-26
      */
     public function setServiceLocator(ServiceLocator $serviceLocator)

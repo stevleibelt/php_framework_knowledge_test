@@ -1,6 +1,6 @@
 <?php
 /**
- * @author stev leibelt <artodeto@arcor.de>
+ * @author stev leibelt <artodeto@bazzline.net>
  * @since 2013-05-26
  */
 namespace Net\Bazzline\KnowledgeTest\TestCase;
@@ -12,21 +12,21 @@ use Net\Bazzline\KnowledgeTest\TestCase\QuestionInterface;
  * Class TestCase
  *
  * @package Net\Bazzline\KnowledgeTest\TestCase
- * @author stev leibelt <artodeto@arcor.de>
+ * @author stev leibelt <artodeto@bazzline.net>
  * @since 2013-05-26
  */
 class TestCase implements TestCaseInterface
 {
     /**
      * @var AnswerInterface
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-25
      */
     protected $answer;
 
     /**
      * @var QuestionInterface
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-25
      */
     protected $question;
@@ -34,7 +34,7 @@ class TestCase implements TestCaseInterface
     /**
      * @{inheritdoc}
      *
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-25
      */
     public function getAnswer()
@@ -51,7 +51,7 @@ class TestCase implements TestCaseInterface
     /**
      * @{inheritdoc}
      *
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-25
      */
     public function setAnswer(AnswerInterface $answer)
@@ -64,7 +64,7 @@ class TestCase implements TestCaseInterface
     /**
      * @{inheritdoc}
      *
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-25
      */
     public function getQuestion()
@@ -81,7 +81,7 @@ class TestCase implements TestCaseInterface
     /**
      * @{inheritdoc}
      *
-     * @author stev leibelt <artodeto@arcor.de>
+     * @author stev leibelt <artodeto@bazzline.net>
      * @since 2013-05-25
      */
     public function setQuestion(QuestionInterface $question)
